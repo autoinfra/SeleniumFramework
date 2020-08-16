@@ -1,0 +1,12 @@
+{
+    "firefox": {
+        "default": "73.0",
+        "versions": {
+            "57.0": {
+                "image": "selenoid/vnc:firefox_73.0",
+                "port": "4444",
+                "path": "/wd/hub"
+            }
+        }
+    }
+}

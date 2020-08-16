@@ -1,0 +1,25 @@
+
+## Execute docker-compose -f Hub.yml -p TeamCityHub up -d --force-recreate --build
+## to start all containers in daemon mode
+## Where:
+##      '-f docker-compose.yml' -- specifies this compose file
+##      '-p reportportal' -- specifies container's prefix (project name)
+##      '-d' -- enables daemon mode
+##      '--force-recreate' -- forces re-recreating of all containers
+
+version: '2.4'
+services:
+
+  TeamCityHub:
+    image: jetbrains/hub:2019.1.12017
+    ports:
+      - "8086:8080" # HTTP exposed
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\HUB\data:/opt/hub/data
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\HUB\conf:/opt/hub/conf
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\HUB\logs:/opt/hub/logs
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\HUB\backups:/opt/hub/backups
+
+    restart: always
+ 

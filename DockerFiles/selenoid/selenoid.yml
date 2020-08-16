@@ -1,0 +1,36 @@
+# Usage:
+#   docker-compose -p selenoid up -d --force-recreate --build
+version: '2.4'
+services:
+
+  selenoid:
+    image: aerokube/selenoid:latest-release
+    network_mode: bridge
+    ports:
+      - "4444:4444" # HTTP exposed
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - C:\AutoInfra_DockerVolumes\selenoid\:/etc/selenoid/ #CONSIDERING BROSWER .JSON IS PRESENT ON Mounted Windows path
+    environment:
+      - TZ="Asia/Kolkata"
+    command: ["-session-delete-timeout", "10m", "-video-output-dir", "/C:/AutoInfra_DockerVolumes/selenoid/videos", "-log-output-dir", "/C:/AutoInfra_DockerVolumes/selenoid/logs"]
+
+    restart: on-failure
+
+  selenoid-ui:
+    image: aerokube/selenoid-ui
+    network_mode: bridge
+    ports:
+      - "1010:8080"
+    links:
+      - selenoid
+    command: ["--selenoid-uri", "http://selenoid:4444"]
+    restart: on-failure
+  
+  selenoid-video-recorder:
+    image: selenoid/video-recorder:latest-release
+    links:
+      - selenoid
+    restart: on-failure
+    
+

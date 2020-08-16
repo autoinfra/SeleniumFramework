@@ -1,0 +1,20 @@
+
+## Execute docker-compose -f YouTrack.yml -p YouTrack up -d --force-recreate --build
+## to start all containers in daemon mode
+## Where:
+##      '-f docker-compose.yml' -- specifies this compose file
+##      '-p reportportal' -- specifies container's prefix (project name)
+##      '-d' -- enables daemon mode
+##      '--force-recreate' -- forces re-recreating of all containers
+
+version: '2.4'
+services:
+
+  Jira:
+    image: atlassian/jira-software:8.6.1
+    restart: always
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\Jira\appdata:/var/atlassian/application-data/jira

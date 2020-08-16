@@ -1,0 +1,27 @@
+PORTS IN USE:
+JENKINS:
+     -	9090:8080
+REPORT PORTAL:
+
+      - '9998:9998'
+      - '8080:9999'
+
+SONARQUBE:
+
+      - "9000:9000"
+      - "9092:9092"
+
+ZALENIUM: 
+      -  4444:4444
+      
+GRAFANA:
+   INFLUX:
+
+    - "8083:8083"
+    - "8086:8086"
+    - "8090:8090"
+    
+   GRAFNA-DASHBOARD:
+      - "3000:3000"
+   CHRONOGRAPH:
+     - 8888:8888

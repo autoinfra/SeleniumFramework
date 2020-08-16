@@ -1,0 +1,30 @@
+
+## Execute docker-compose -f YouTrack.yml -p YouTrack up -d --force-recreate --build
+## to start all containers in daemon mode
+## Where:
+##      '-f docker-compose.yml' -- specifies this compose file
+##      '-p reportportal' -- specifies container's prefix (project name)
+##      '-d' -- enables daemon mode
+##      '--force-recreate' -- forces re-recreating of all containers
+
+version: '2.4'
+services:
+
+  YouTrack:
+    image: jetbrains/youtrack:2019.3.65512
+    ports:
+      - "8085:8080" # HTTP exposed
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\YouTrack\data:/opt/youtrack/data
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\YouTrack\conf:/opt/youtrack/conf
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\YouTrack\logs:/opt/youtrack/logs
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\YouTrack\backups:/opt/youtrack/backups
+
+    restart: always
+         
+  # Docker volume for Windows host
+#volumes:
+#  TCS_DATA:
+
+#YouTrack License: 42bd2ce4dbaf8554bf082946a1c039d4384e81a99ed53fb75215c1b6ace8d34cf66889fdeee418cbe93d54f38f6e94a8a05a0108234b1955582d566283e3d084b23a0b8b52b016b0e610abcbbe7573fa3ff8fb3cdc9346dc94ef5f596f5b12719abcb02e6fae23d98f53f22a01788066aac7298b7fe79cc3dcd6f8df2fb41ab4

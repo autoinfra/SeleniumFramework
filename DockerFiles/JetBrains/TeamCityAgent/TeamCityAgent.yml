@@ -1,0 +1,25 @@
+
+## Execute docker-compose -f TeamCityAgent.yml -p TeamCityAgent up -d --force-recreate --build
+## to start all containers in daemon mode
+## Where:
+##      '-f docker-compose.yml' -- specifies this compose file
+##      '-p reportportal' -- specifies container's prefix (project name)
+##      '-d' -- enables daemon mode
+##      '--force-recreate' -- forces re-recreating of all containers
+
+version: '2.4'
+services:
+
+  TeamCityAgent:
+    image: jetbrains/teamcity-agent:eap
+
+    environment:
+      - SERVER_URL=http://localhost:8111
+      - TEAMCITY_SERVER_MEM_OPTS=-Xmx2g -XX:ReservedCodeCacheSize=350m
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Agent\conf:/data/teamcity_agent/conf
+
+
+    restart: always
+         

@@ -1,0 +1,24 @@
+logs
+target
+test-output
+.idea
+gitcommands.txt
+jenkinsConn.txt
+DockerFiles/qps-infra/
+DockerFiles/Zafira/zafira
+*.bak
+Documentation Files
+/AdditionalInfo.txt
+*.iml
+/src/test/java/Practice/
+/resources/files/test_screenshots/
+
+/out/
+/Documentation/AzureDevOps/vsts-agent-win-x64/
+/ReadMeSamples/
+/reports/
+/reportportal.lock
+/reportportal.sync
+/DockerFiles/reportportal/Plugins/
+/HtmlReports/
+/src/test/java/Practice/Programs/

@@ -1,0 +1,29 @@
+
+## Execute docker-compose -f Upsource.yml -p Upsource up -d --force-recreate --build
+## to start all containers in daemon mode
+## Where:
+##      '-f docker-compose.yml' -- specifies this compose file
+##      '-p reportportal' -- specifies container's prefix (project name)
+##      '-d' -- enables daemon mode
+##      '--force-recreate' -- forces re-recreating of all containers
+
+version: '2.4'
+services:
+
+  TeamCityUpsource:
+    image: jetbrains/upsource:2019.1.1644
+    ports:
+      - "8081:8080" # HTTP exposed
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\data:/opt/upsource/data
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\conf:/opt/upsource/conf
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\logs:/opt/upsource/logs
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\backups:/opt/upsource/backups
+#      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\data:/opt/Upsource/data
+#      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\conf:/opt/Upsource/conf
+#      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\logs:/opt/Upsource/logs
+#      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\backups:/opt/Upsource/backups      
+
+    restart: always
+         

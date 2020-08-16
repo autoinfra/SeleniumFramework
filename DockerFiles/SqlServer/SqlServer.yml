@@ -1,0 +1,26 @@
+# Usage:
+#   docker-compose -f C:\AutoInfra\DockerFiles\SqlServer\SqlServer.yml -p SQL_SERVER up -d --force-recreate --build
+version: '3'
+
+services:
+  #--------------#
+  SQL_SERVER:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    container_name: Sql_Server
+
+    ports:
+      - 1800:1433
+    volumes:
+      - C:\AutoInfra_DockerVolumes\SqlServer\data:/var/opt/mssql/data 
+      - C:\AutoInfra_DockerVolumes\SqlServer\log:/var/opt/mssql/log 
+      - C:\AutoInfra_DockerVolumes\SqlServer\secrets:/var/opt/mssql/secrets
+
+    environment:
+      - ACCEPT_EULA=Y 
+      - SA_PASSWORD=Auto_Infra
+#      - MSSQL_PID="AutoInfra"
+      - TZ=Asia/Kolkata
+      - MSSQL_AGENT_ENABLED=true
+
+####INSTRUCTIONS#####
+#DO NOT CHANGE VALUE OF Environment Variable MSSQL_PID once it is deployed once

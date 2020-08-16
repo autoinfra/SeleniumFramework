@@ -1,0 +1,41 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+    branches:
+      include:
+      - master 
+      #'*'
+    paths:
+      exclude:
+      - additions.md
+      - ChangeLog.Txt
+      - README.md
+jobs:
+  - job: 'TestRun_in_Windows'
+    pool:
+      vmImage: 'windows-latest' 
+      # other VM options: 'macOS-10.14', 'vs2017-win2016' , 'ubuntu-16.04'
+      #Complete List of Available VMs- https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops
+    steps:
+    - task: Maven@3
+      inputs:
+        mavenPomFile: 'pom.xml'
+        goals: 'verify sonar:sonar test'
+        options: '-DGRID_TYPE="NO_GRID"'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        javaHomeOption: 'JDKVersion'
+        jdkVersionOption: '1.8'
+        mavenVersionOption: 'Default'
+        mavenAuthenticateFeed: false
+        effectivePomSkip: false
+        sonarQubeRunAnalysis: true
+        sqMavenPluginVersionChoice: 'pom'
+
+      
+      
+#Reference https://github.com/adamdriscoll/selenium-powershell/blob/master/CI/pipeline.yml      
+#More Maven Options - https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/maven?view=azure-devops

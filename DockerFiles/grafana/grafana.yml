@@ -1,0 +1,51 @@
+# Usage:
+#   docker-compose -p Grafana up -d --force-recreate --build
+influxdb:
+  image: "influxdb:1.7.9"
+  container_name: influxdb
+  ports:
+    - "8083:8083"
+    - "8084:8086"
+    - "8090:8090"
+  
+  volumes:
+    # Data persistency
+    # sudo mkdir -p /srv/docker/influxdb/data
+    - C:\AutoInfra_DockerVolumes\grafana_and_Influx\influxdb:/var/lib/influxdb
+
+
+  environment:
+    - INFLUXDB_DB=db0
+    - INFLUXDB_ADMIN_USER=admin
+    - INFLUXDB_ADMIN_PASSWORD=admin
+    
+#chronograf:
+#  image: quay.io/influxdb/chronograf:1.7.16
+#  ports:
+#      - '8888:8888'
+#  links:
+#      - influxdb
+     
+#  volumes:
+#      - C:\AutoInfra_DockerVolumes\grafana_and_Influx\chronograph:/var/lib/chronograf
+
+#  environment:
+#      - INFLUXDB_URL=http://influxdb:8084
+#      - INFLUXDB_USERNAME=admin
+#      - INFLUXDB_PASSWORD=admin
+
+grafana:
+  image: "grafana/grafana:6.5.2"
+  container_name: grafana
+  ports:
+    - "3000:3000"
+#  environment:
+#    - GF_INSTALL_PLUGINS=grafana-piechart-panel
+  links:
+      - influxdb
+  volumes:
+    # Data persistency
+    # sudo mkdir -p /srv/docker/grafana/data; chown 472:472 /srv/docker/grafana/data
+    - C:\AutoInfra_DockerVolumes\grafana_and_Influx\grafana:/var/lib/grafana
+
+ 

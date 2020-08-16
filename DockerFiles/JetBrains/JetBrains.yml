@@ -1,0 +1,78 @@
+## Execute docker-compose -f JetBrains.yml -p JetBrains up -d --force-recreate --build
+## to start all containers in daemon mode
+## Where:
+##      '-f docker-compose.yml' -- specifies this compose file
+##      '-p reportportal' -- specifies container's prefix (project name)
+##      '-d' -- enables daemon mode
+##      '--force-recreate' -- forces re-recreating of all containers
+
+version: '2.4'
+services:
+
+  YouTrack:
+    image: jetbrains/youtrack:2019.3.65512
+    ports:
+      - "8085:8080" # HTTP exposed
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\YouTrack\data:/opt/YouTrack/data
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\YouTrack\conf:/opt/YouTrack/conf
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\YouTrack\logs:/opt/YouTrack/logs
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\YouTrack\backups:/opt/YouTrack/backups
+
+    restart: always
+         
+  TeamCityHub:
+    image: jetbrains/hub:2019.1.12017
+    ports:
+      - "8088:8080" # HTTP exposed
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Hub\data:/opt/hub/data
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Hub\conf:/opt/hub/conf
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Hub\logs:/opt/hub/logs
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Hub\backups:/opt/hub/backups
+
+    restart: always
+
+  TeamCityServer:
+    image: jetbrains/teamcity-server:eap
+    ports:
+      - "8111:8111" # HTTP exposed
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Server\datadir:/data/teamcity_server/datadir
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Server\logs:/opt/teamcity/logs
+
+    restart: always
+
+  TeamCityAgent:
+    image: jetbrains/teamcity-agent:eap
+
+    environment:
+      - SERVER_URL=http://localhost:8111
+      - TEAMCITY_SERVER_MEM_OPTS=-Xmx2g -XX:ReservedCodeCacheSize=350m
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Agent\conf:/data/teamcity_agent/conf
+
+    restart: always    
+
+  TeamCityUpsource:
+    image: jetbrains/hub:2019.1.12017
+    ports:
+      - "8081:8080" # HTTP exposed
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\upsource\data:/opt/upsource/data
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\upsource\conf:/opt/upsource/conf
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\upsource\logs:/opt/upsource/logs
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\upsource\backups:/opt/upsource/backups
+#      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\data:/opt/Upsource/data
+#      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\conf:/opt/Upsource/conf
+#      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\logs:/opt/Upsource/logs
+#      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Upsource\backups:/opt/Upsource/backups      
+
+    restart: always
+ Cassandra:
+    image: cassandra:3.11.6

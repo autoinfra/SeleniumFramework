@@ -1,0 +1,17 @@
+Configure your proxy (If needed)
+Go to your maven installation folder  /conf/settings.xml (create it if it doesn't exist) and use the following as template.
+
+<settings>
+  <proxies>
+   <proxy>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>PUT-YOUR-PROXY-NAME</host>
+      <port>PUT-YOUR-PORT-NUMBER</port>
+      <username>proxyuser</username>
+      <password>somepassword</password>
+      <nonProxyHosts>www.google.com|*.somewhere.com</nonProxyHosts>
+    </proxy>
+  </proxies>
+</settings>
+http://www.jcgonzalez.com/maven-just-copy-dependencies

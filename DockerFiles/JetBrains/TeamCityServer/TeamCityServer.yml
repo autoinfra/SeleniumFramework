@@ -1,0 +1,26 @@
+
+## Execute docker-compose -f TeamCityServer.yml -p TeamCityServer up -d --force-recreate --build
+## to start all containers in daemon mode
+## Where:
+##      '-f docker-compose.yml' -- specifies this compose file
+##      '-p reportportal' -- specifies container's prefix (project name)
+##      '-d' -- enables daemon mode
+##      '--force-recreate' -- forces re-recreating of all containers
+
+version: '2.4'
+services:
+
+  TeamCityServer:
+    image: jetbrains/teamcity-server:eap
+    ports:
+      - "8111:8111" # HTTP exposed
+
+    volumes:
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Server\datadir:/data/teamcity_server/datadir
+      - C:\AutoInfra_DockerVolumes\JetBrains\TeamCity\Server\logs:/opt/teamcity/logs
+
+    restart: always
+         
+  # Docker volume for Windows host
+#volumes:
+#  TCS_DATA:

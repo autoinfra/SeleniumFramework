@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true"
+                     xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+    <appender name="ReportPortalAppender" class="com.epam.ta.reportportal.log4j.appender.ReportPortalAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{HH:mm:ss}] %-5p (%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+    <logger name="com.epam.reportportal.apache">
+        <level value="OFF"/>
+    </logger>
+    <root>
+        <level value="info"/>
+        <appender-ref ref="ReportPortalAppender"/>
+    </root>
+
+</log4j:configuration>
