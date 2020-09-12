@@ -3,11 +3,9 @@
 <suite name="DuckDuckGO Search" >
 
     <listeners>
-<!--     	<listener class-name="listeners.grafanalistener"/>
-     	<listener class-name="listeners.ElasticListener"/>-->
-<!--	    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>-->
-<!--        <listener class-name="listeners.ExtentListener"></listener>-->
-   <!--      <listener class-name="listeners.PowerBI_Listener"/>-->
+
+
+         <listener class-name="listeners.PowerBI_Listener"/>
 
     </listeners>
 

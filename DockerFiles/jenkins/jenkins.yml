@@ -3,7 +3,7 @@
 version: '2'
 services:
   jenkins:
-    image: "jenkins/jenkins:2.211"
+    image: "jenkins/jenkins:latest"
     container_name: jenkins
     user: jenkins
     volumes:
