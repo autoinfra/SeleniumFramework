@@ -1,20 +1,17 @@
 package listeners;
 
-import java.time.LocalDateTime;
-
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.time.LocalDateTime;
+
 public class ElasticListener implements ITestListener {
 
-    //private Elastic_Json_TestStatus testStatus;
-    private Elastic_Json_TestStatus Elastic_Json_TestStatus;
+    private listeners.Elastic_Json_TestStatus Elastic_Json_TestStatus;
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        //this.testStatus = new TestStatus();
-        this.Elastic_Json_TestStatus = new Elastic_Json_TestStatus();
     }
 
     @Override
@@ -48,13 +45,15 @@ public class ElasticListener implements ITestListener {
     }
 
     private void sendStatus(ITestResult iTestResult, String status){
-        this.Elastic_Json_TestStatus.setTestClass(iTestResult.getTestClass().getName());
-        this.Elastic_Json_TestStatus.setDescription(iTestResult.getMethod().getDescription());
-        this.Elastic_Json_TestStatus.setStatus(status);
-        this.Elastic_Json_TestStatus.setExecutionDate(LocalDateTime.now().toString());
+        this.Elastic_Json_TestStatus= listeners.Elastic_Json_TestStatus
+                .builder()
+                .status(status)
+                .testClass(iTestResult.getTestClass().getName())
+                .description(iTestResult.getMethod().getDescription())
+                .executionTime(LocalDateTime.now().toString())
+                .build();
         ElasticResultSender.send(this.Elastic_Json_TestStatus);
     }
-
 
 
 }

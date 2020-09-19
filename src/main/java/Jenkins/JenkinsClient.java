@@ -1,12 +1,13 @@
 package Jenkins;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 import io.restassured.path.xml.XmlPath;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.log4testng.Logger;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 
 public class JenkinsClient {

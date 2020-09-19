@@ -2,27 +2,8 @@ package listeners;
 
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
-import io.restassured.RestAssured.*;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.matcher.RestAssuredMatchers.*;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import org.hamcrest.Matchers.*;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
-import java.awt.*;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.security.Key;
-
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
 
 public class PowerBI_ResultSender {
 

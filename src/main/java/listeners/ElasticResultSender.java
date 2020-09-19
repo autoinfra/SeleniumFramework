@@ -1,23 +1,22 @@
 package listeners;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mashape.unirest.http.Unirest;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 
 public class ElasticResultSender {
 
-    private static final ObjectMapper OM = new ObjectMapper();
-    private static final String CONTENT_TYPE = "Content-Type";
-    private static final String CONTENT_TYPE_VALUE = "application/json";
-    private static final String ELASTICSEARCH_URL = "http://localhost:9200/app/suite";
-
     public static void send(final Elastic_Json_TestStatus testStatus){
         try {
-            Unirest.post(ELASTICSEARCH_URL)
-                    .header(CONTENT_TYPE, CONTENT_TYPE_VALUE)
-                    .body(OM.writeValueAsString(testStatus)).asJson();
+            RestAssured.baseURI="http://localhost:9200";
+            RestAssured.given()
+                    .contentType(ContentType.JSON)
+                    .body(testStatus)
+                    .when()
+                    .post("/app/suite");
+
         } catch (Exception e) {
             //System.out.println("Unable to connect to Elastic Search Node");
-            //e.printStackTrace();
+          //  e.printStackTrace();
         }
     }
 
