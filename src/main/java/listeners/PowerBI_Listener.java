@@ -61,14 +61,16 @@ public class PowerBI_Listener implements ITestListener,ITestContext {
         String Result = status;
         long Duration = ITR.getEndMillis() - ITR.getStartMillis();
 
-        PowerBI_Pojo p = new PowerBI_Pojo();
-        p.setSuitename(Suitename);
-        p.setClassname(Classname);
-        p.setMethodname(Methodname);
-        p.setMethodDescription(MethodDescription);
-        p.setHost(Host);
-        p.setResult(Result);
-        p.setDuration(Duration);
+        PowerBI_Pojo p = PowerBI_Pojo.builder()
+                .Suitename(Suitename)
+                .Classname(Classname)
+                .Methodname(Methodname)
+                .MethodDescription(MethodDescription)
+                .Host(Host)
+                .Result(Result)
+                .Duration(Duration)
+                .build();
+
         List<PowerBI_Pojo> List = new ArrayList<PowerBI_Pojo>();
         List.add(p);
         PowerBI_Pojo_Base PB = new PowerBI_Pojo_Base();
