@@ -1,5 +1,6 @@
 package base;
 
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,6 +12,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.WebDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -105,9 +108,12 @@ public class base_redefined {
               break;
           case "NO_GRID":
           //case System.getProperty("GRID_TYPE").is:
-                  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe");
-                  this.driver = new ChromeDriver();
+                 // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe");
+
+              WebDriverManager.chromedriver().setup();
+              this.driver = new ChromeDriver();
                   break;
+
           default:System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/geckodriver.exe");
               this.driver = new FirefoxDriver();
               break;
