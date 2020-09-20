@@ -23,7 +23,7 @@ jobs:
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
-        goals: 'verify sonar:sonar test'
+        goals: 'test'
         options: '-DGRID_TYPE="NO_GRID"'
         publishJUnitResults: true
         testResultsFiles: '**/surefire-reports/TEST-*.xml'
