@@ -6,6 +6,17 @@
 ##### Main Objective of this Framework is to Build an Automation Framework that can be scalable, Easily Configurable and Ready to Deploy in any CLOUD on Dockers.
 
 ##### My primary focus is simplicity, Ease of use Framework that Cover Todays Software Testing Needs. I tried to make it as generic and reusable as possible. In the worst case, you can use this as a learning guide for your projects.
+## UpComing Features [planned to release SOON]
+
+> [**“Powerapps Mobile App”**](https://www.linkedin.com/posts/bhargavmurari_azuredevops-microsoft-powerapps-activity-6681443971572617216-CLH3)<br>
+> — To Trigger Your Pipelines From Mobile
+
+> [**“Alexa Skill”**]()<br>
+> — To Trigger And know the status of pipeline
+
+> [**“Implementing Factory Pattern"**]()<br>
+> — Fatory design pattern to initialize webdriver
+
 
 ### System and Software Requirements
 1. Docker v17 and above.
