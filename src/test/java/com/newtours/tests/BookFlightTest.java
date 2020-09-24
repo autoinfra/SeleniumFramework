@@ -10,6 +10,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import utilities.retry;
 
+import java.util.stream.Stream;
+
 public class BookFlightTest extends base_redefined {
     private static final Logger LOGGER = LogManager.getLogger(BookFlightTest.class);
 
@@ -22,6 +24,8 @@ public class BookFlightTest extends base_redefined {
     {
         this.noofPassangers=noofPassangers;
         this.expectedprice=expectedprice;
+        int i=10;
+
     }
 
     @Test(description = "UserRegistration" , retryAnalyzer=retry.class)

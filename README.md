@@ -5,7 +5,6 @@
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://www.linkedin.com/in/bhargavmurari/detail/recent-activity/posts/)
 ##### Main Objective of this Framework is to Build an Automation Framework that can be scalable, Easily Configurable and Ready to Deploy in any CLOUD on Dockers.
 
-
 ##### My primary focus is simplicity, Ease of use Framework that Cover Todays Software Testing Needs. I tried to make it as generic and reusable as possible. In the worst case, you can use this as a learning guide for your projects.
 
 ### System and Software Requirements
@@ -44,5 +43,9 @@
 
 ![Alt text](./Documentation/images/jetbrains.png "JET BRAINS")
 
+<h2 align="center">Grafana Reports</h2>
 
-![AzureDevOps](https://app.powerbi.com/view?r=eyJrIjoiN2VhNWYwODgtMTAyYi00NWIyLTg0ZTMtNTkyODYyODg1NDRhIiwidCI6ImM4ZWNhM2NhLTEyNzYtNDZkNS05ZDlkLWEwZjJhMDI4OTIwZiIsImMiOjl9)
+![Kibana Dashboard](./Documentation/images/GrafanaReport.PNG "Grafana Reports")
+
+
+[AzureDevOps](https://app.powerbi.com/view?r=eyJrIjoiN2VhNWYwODgtMTAyYi00NWIyLTg0ZTMtNTkyODYyODg1NDRhIiwidCI6ImM4ZWNhM2NhLTEyNzYtNDZkNS05ZDlkLWEwZjJhMDI4OTIwZiIsImMiOjl9)
