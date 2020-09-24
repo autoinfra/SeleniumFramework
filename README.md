@@ -39,13 +39,11 @@
 
 ![Kibana Dashboard](./Documentation/images/Kibana1.png "ElasticSearch Reports")
 
-<h2 align="Left">Our Supporters</h2>
-
-![Alt text](./Documentation/images/jetbrains.png "JET BRAINS")
-
 <h2 align="center">Grafana Reports</h2>
 
 ![Kibana Dashboard](./Documentation/images/GrafanaReport.PNG "Grafana Reports")
 
+<h2 align="Left">Project Supporters</h2>
 
-[AzureDevOps](https://app.powerbi.com/view?r=eyJrIjoiN2VhNWYwODgtMTAyYi00NWIyLTg0ZTMtNTkyODYyODg1NDRhIiwidCI6ImM4ZWNhM2NhLTEyNzYtNDZkNS05ZDlkLWEwZjJhMDI4OTIwZiIsImMiOjl9)
+![Alt text](./Documentation/images/jetbrains.png "JET BRAINS")
+
