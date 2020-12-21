@@ -17,7 +17,7 @@ public class ExtentReporterCls {
         String ReportFolderName = SDF.format(d);
         String path = System.getProperty("user.dir")+"\\HtmlReports\\Extent\\"+ReportFolderName+"\\"+Testname+"ExecutionReport.html";
         ExtentSparkReporter ESR = new ExtentSparkReporter(path);
-        ESR.config().setReportName("Single Rater Test Automation Results");
+        ESR.config().setReportName("Test Automation Results");
         ESR.config().setDocumentTitle(SDF+"Test Results");
         extent = new ExtentReports();
         extent.attachReporter(ESR);
