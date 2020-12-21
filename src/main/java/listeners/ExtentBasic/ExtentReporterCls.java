@@ -1,4 +1,4 @@
-package listeners;
+package listeners.ExtentBasic;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -10,20 +10,23 @@ import java.util.Date;
 public class ExtentReporterCls {
     static ExtentReports extent;
 
-    public static ExtentReports ReportGenerator()
+    public static ExtentReports ReportGenerator(String Testname)
     {
         Date d = new Date();
-        SimpleDateFormat SDF = new SimpleDateFormat("MMMM-dd-yyyy");
+        SimpleDateFormat SDF = new SimpleDateFormat("yyyy-MMM-dd_HH_mm");
         String ReportFolderName = SDF.format(d);
-        String path = System.getProperty("user.dir")+"\\HtmlReports\\Extent\\"+ReportFolderName+"\\"+System.getProperty("user.name")+"TestReport.html";
+        String path = System.getProperty("user.dir")+"\\HtmlReports\\Extent\\"+ReportFolderName+"\\"+Testname+"ExecutionReport.html";
         ExtentSparkReporter ESR = new ExtentSparkReporter(path);
-        ESR.config().setReportName("Automation Results");
-        ESR.config().setDocumentTitle("Test Results");
+        ESR.config().setReportName("Single Rater Test Automation Results");
+        ESR.config().setDocumentTitle(SDF+"Test Results");
         extent = new ExtentReports();
         extent.attachReporter(ESR);
         extent.setSystemInfo("Tester",System.getProperty("user.name"));
-        extent.setSystemInfo("OS",System.getProperty("user.os"));
         return extent;
+
+    }
+    public void ChildPrent()
+    {
 
     }
 }
