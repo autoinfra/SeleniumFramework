@@ -38,7 +38,7 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch-oss:7.3.0
     restart: always
     volumes:
-      - 'C:\AutoInfra_DockerVolumes\reportportal\V5\elasticsearch:/usr/share/elasticsearch/data'
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
     environment:
       - "bootstrap.memory_lock=true"
       - "discovery.type=single-node"
@@ -63,18 +63,18 @@ services:
     restart: always
 
   ### initial db schema for reportportal
-#  db-scripts:
-#    image: reportportal/migrations:5.0.0
-#    restart: on-failure
-#    depends_on:
-#      postgres:
-#        condition: service_healthy
-#    environment:
-#      POSTGRES_SERVER: postgres
-#      POSTGRES_PORT: 5432
-#      POSTGRES_DB: reportportal
-#      POSTGRES_USER: rpuser
-#      POSTGRES_PASSWORD: rppass
+  db-scripts:
+    image: reportportal/migrations:5.0.0
+    restart: on-failure
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      POSTGRES_SERVER: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: reportportal
+      POSTGRES_USER: rpuser
+      POSTGRES_PASSWORD: rppass
 
 
   postgres:
@@ -86,9 +86,9 @@ services:
       POSTGRES_DB: reportportal
     volumes:
       # For unix host
-      #- ./data/postgres:/var/lib/postgresql/data
+      - ./data/postgres:/var/lib/postgresql/data
       # For windows host
-      - postgres:/var/lib/postgresql/data
+      #- postgres:/var/lib/postgresql/data
     restart: on-failure
     # If you need to access the DB locally. Could be a security risk to expose DB.
     #    ports:
@@ -197,7 +197,7 @@ services:
     ports:
       - '9000:9000'
     volumes:
-      - 'C:\AutoInfra_DockerVolumes\reportportal\V5\minio:/data'
+      - ./data/minio:/data
     environment:
       MINIO_ACCESS_KEY: minio
       MINIO_SECRET_KEY: minio123
@@ -209,5 +209,5 @@ services:
       retries: 3
 
   # Docker volume for Windows host
-volumes:
-  postgres:
+#volumes:
+#  postgres:

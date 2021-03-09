@@ -23,3 +23,5 @@ Documentation Files
 /HtmlReports/
 /src/test/java/Practice/Programs/
 /zebrunner/
+/DockerFiles/portainer/volumes/
+/DockerFiles/reportportal/yaml/data/

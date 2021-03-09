@@ -12,11 +12,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.Proxy;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -26,6 +22,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import listeners.LoggingUtils;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import rp.com.google.common.io.Files;
 import rp.com.google.common.io.Resources;
 
@@ -41,10 +39,9 @@ public class base {
 		  prop.load(fis);
 
 		 String OS = System.getProperty("os.name");
-	/*executes in Zalenium chrome*/
-	//System.out.println("browser from prop is: "+prop.getProperty("browser"));
-	//System.out.println("User dir is: "+System.getProperty("user.dir"));
-//	String browser = System.getProperty("browser");
+/*		 driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("123"))));*/
   String browser = prop.getProperty("browser");
 	if(browser.equals("remote-chrome"))
 	{

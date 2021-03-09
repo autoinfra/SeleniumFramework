@@ -17,7 +17,7 @@ services:
 #      - "8000:8000" # HTTP exposed
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-#      - C:\AutoInfra_DockerVolumes\portainer\data:/data
+      - ./volumes/data:/data
 
 
     restart: always

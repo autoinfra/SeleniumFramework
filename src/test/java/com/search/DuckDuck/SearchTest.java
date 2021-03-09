@@ -20,7 +20,7 @@ public class SearchTest extends base_redefined {
         SP.doSearch(keywordfromTestNG);
         SP.goToVideos();
         int size = SP.printResult();
-        Assert.assertTrue(size > 0);
+        Assert.assertTrue(size > 100);
 
     }
 }

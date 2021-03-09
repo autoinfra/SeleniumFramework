@@ -109,7 +109,7 @@ public class base_redefined {
               break;
           case "NO_GRID":
           //case System.getProperty("GRID_TYPE").is:
-                 // System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe");
+                 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/resources/drivers/chromedriver.exe");
 
               WebDriverManager.chromedriver().setup();
               this.driver = new ChromeDriver();
