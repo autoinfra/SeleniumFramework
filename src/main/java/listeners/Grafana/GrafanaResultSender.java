@@ -1,4 +1,4 @@
-package listeners;
+package listeners.Grafana;
 
 import base.base_redefined;
 import org.influxdb.InfluxDB;

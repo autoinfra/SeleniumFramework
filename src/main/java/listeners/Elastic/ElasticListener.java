@@ -1,4 +1,4 @@
-package listeners;
+package listeners.Elastic;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 public class ElasticListener implements ITestListener {
 
-    private listeners.Elastic_Json_TestStatus Elastic_Json_TestStatus;
+    private listeners.Elastic.Elastic_Json_TestStatus Elastic_Json_TestStatus;
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
@@ -45,7 +45,7 @@ public class ElasticListener implements ITestListener {
     }
 
     private void sendStatus(ITestResult iTestResult, String status){
-        this.Elastic_Json_TestStatus= listeners.Elastic_Json_TestStatus
+        this.Elastic_Json_TestStatus= listeners.Elastic.Elastic_Json_TestStatus
                 .builder()
                 .status(status)
                 .testClass(iTestResult.getTestClass().getName())

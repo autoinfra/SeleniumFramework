@@ -1,4 +1,4 @@
-package listeners;
+package listeners.PowerBI;
 
 import com.google.inject.Injector;
 import com.google.inject.Module;

@@ -4,27 +4,18 @@
 
 <!--    <listeners>
     	<listener class-name="listeners.TestNGlisteners"/>
-     	<listener class-name="listeners.grafanalistener"/>
+     	<listener class-name="listeners.Grafana.grafanalistener"/>
      	<listener class-name="listeners.ElasticListenerr"/>
 	    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
     </listeners>
     -->
+<!--
  <test name="Amazon">
     <classes>
       <class name="com.ctac.amazon"/>
     </classes>
   </test>
-
-<!--    <test name="Flipkart">-->
-<!--    <classes>-->
-<!--      <class name="com.ctac.Flipkart"/>-->
-<!--    </classes>-->
-<!--  </test>-->
-<!--
-     <test name="LogFiles">
-     <classes>
-       <class name="com.ctac.LoggingTest"/>
-     </classes>
-   </test>
 -->
+
+
 </suite> <!-- Ecommerce_Test -->

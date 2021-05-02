@@ -5,8 +5,6 @@ import org.apache.logging.log4j.Logger;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
-import listeners.LoggingUtils;
-
 public class retry implements IRetryAnalyzer{
 	private int count = 0;
     private static int maxTry = 3;

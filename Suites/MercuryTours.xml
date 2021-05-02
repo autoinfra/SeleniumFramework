@@ -3,8 +3,8 @@
 <suite name="MercuryTours Tests" parallel="tests">
 
     <listeners>
-     	<listener class-name="listeners.grafanalistener"/>
-    <listener class-name="listeners.ElasticListener"/>
+     	<listener class-name="listeners.Grafana.grafanalistener"/>
+    <listener class-name="listeners.Elastic.ElasticListener"/>
 	    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
 <!--        <listener class-name="listeners.ExtentListener"></listener>-->
     </listeners>

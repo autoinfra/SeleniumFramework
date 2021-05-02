@@ -1,17 +1,12 @@
 package listeners;
 
 
-import java.io.IOException;
-
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import base.base;
-
 public class TestNGlisteners implements ITestListener  {
-	base b = new base();
+	//base b = new base();
 	public void onFinish(ITestContext arg0) {
 		// TODO Auto-generated method stub
 		//hey i am done
@@ -32,7 +27,7 @@ public class TestNGlisteners implements ITestListener  {
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 		//screenshot
-		try {
+/*		try {
 //System.out.println("Print Result name: "+result.getName());
 
 			b.getscreenshot(result.getName());
@@ -40,7 +35,7 @@ public class TestNGlisteners implements ITestListener  {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			
+			*/
 		
 	}
 
@@ -57,14 +52,14 @@ public class TestNGlisteners implements ITestListener  {
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 
-		try {
+/*		try {
 			//System.out.println("Print Result name: "+result.getName());
 
 						b.getscreenshot(result.getName());
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
-					}
+					}*/
 	
 	}
 

@@ -4,20 +4,20 @@
 
     <listeners>
 
-<!--      	<listener class-name="listeners.grafanalistener"/>-->
-<!--     <listener class-name="listeners.ElasticListener"/>-->
- 	    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
-        <listener class-name="listeners.ExtentBasic.ExtentListener"></listener>
-<!--          <listener class-name="listeners.PowerBI_Listener"/>-->
+<!--      	<listener class-name="listeners.Grafana.grafanalistener"/>-->
+<!--     <listener class-name="listeners.Elastic.ElasticListener"/>-->
+<!-- 	    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>-->
+<!--        <listener class-name="listeners.ExtentBasic.ExtentListener"></listener>-->
+<!--          <listener class-name="listeners.PowerBI.PowerBI_Listener"/>-->
 
     </listeners>
 
-    <test name="Search-For-WebDriver">
+<!--    <test name="Search-For-WebDriver">
         <parameter name="keywordToSearch" value="WebDriver" />
         <classes>
             <class name="com.search.DuckDuck.SearchTest" />
         </classes>
-    </test>
+    </test>-->
 
     <test name="Search-For-Selenium">
         <parameter name="keywordToSearch" value="Selenium" />
@@ -26,7 +26,7 @@
         </classes>
     </test>
 
-    <test name="Search-For-UFT">
+ <!--   <test name="Search-For-UFT">
         <parameter name="keywordToSearch" value="UFT" />
         <classes>
             <class name="com.search.DuckDuck.SearchTest" />
@@ -52,7 +52,7 @@
         <classes>
             <class name="com.search.DuckDuck.SearchTest" />
         </classes>
-    </test>
+    </test>-->
 
 </suite> <!-- Ecommerce_Test -->
 

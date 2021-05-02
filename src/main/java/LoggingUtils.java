@@ -4,11 +4,7 @@ import rp.com.google.common.io.BaseEncoding;
 
 import java.io.File;
 
-/**
- * Useful for binary data (e.g. sending files to ReportPortal)
- *
- * @author Andrei Varabyeu
- */
+
 public class LoggingUtils {
 
     private static final Logger LOGGER = LogManager.getLogger("binary_data_logger");

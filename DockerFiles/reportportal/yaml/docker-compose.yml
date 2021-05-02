@@ -1,10 +1,9 @@
-
 ## You can generate a custom docker compose file automatically on http://reportportal.io/download (Step 2)
 
 ## This is example of Docker Compose for ReportPortal
 ## Do not forget to configure data volumes for production usage
 
-## Execute docker-compose -f RPV5.3.yml -p reportportal up -d --force-recreate --build
+## Execute 'docker-compose -f docker-compose.yml -p reportportal up -d --force-recreate' --build
 ## to start all containers in daemon mode
 ## Where:
 ##      '-f docker-compose.yml' -- specifies this compose file
@@ -34,8 +33,8 @@ services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.3.0
     volumes:
-      - ./data/elasticsearch:/usr/share/elasticsearch/data
-      #- elasticsearchdata:/usr/share/elasticsearch/data
+#      - ./data/elasticsearch:/usr/share/elasticsearch/data
+      - elasticsearch:/usr/share/elasticsearch/data
     environment:
       - "bootstrap.memory_lock=true"
       - "discovery.type=single-node"
@@ -56,7 +55,7 @@ services:
     restart: always
 
   analyzer:
-    image: reportportal/service-auto-analyzer:5.3.4
+    image: reportportal/service-auto-analyzer:5.3.5
     environment:
       LOGGING_LEVEL: info
       AMQP_URL: amqp://rabbitmq:rabbitmq@rabbitmq:5672
@@ -69,18 +68,18 @@ services:
     restart: always
 
   ### Initial reportportal db schema. Run once.
-#  db-scripts:
-#    image: reportportal/migrations:5.3.4
-#    depends_on:
-#      postgres:
-#        condition: service_healthy
-#    environment:
-#      POSTGRES_SERVER: postgres
-#      POSTGRES_PORT: 5432
-#      POSTGRES_DB: reportportal
-#      POSTGRES_USER: rpuser
-#      POSTGRES_PASSWORD: rppass
-#    restart: on-failure
+  db-scripts:
+    image: reportportal/migrations:5.3.5
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      POSTGRES_SERVER: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: reportportal
+      POSTGRES_USER: rpuser
+      POSTGRES_PASSWORD: rppass
+    restart: on-failure
 
   postgres:
     image: postgres:12-alpine
@@ -91,9 +90,9 @@ services:
       POSTGRES_DB: reportportal
     volumes:
       # For unix host
-      - ./data/postgres:/var/lib/postgresql/data
+#      - ./data/postgres:/var/lib/postgresql/data
       # For windows host
-      #- postgresdata:/var/lib/postgresql/data
+       - postgres:/var/lib/postgresql/data
     # If you need to access the DB locally. Could be a security risk to expose DB.
     #    ports:
     #      - "5432:5432"
@@ -137,7 +136,7 @@ services:
     restart: always
 
   uat:
-    image: reportportal/service-authorization:5.3.3
+    image: reportportal/service-authorization:5.3.5
     #ports:
     #  - "9999:9999"
     environment:
@@ -177,7 +176,7 @@ services:
     restart: always
 
   api:
-    image: reportportal/service-api:5.3.4
+    image: reportportal/service-api:5.3.5
     depends_on:
       rabbitmq:
         condition: service_healthy
@@ -211,7 +210,7 @@ services:
     restart: always
 
   ui:
-    image: reportportal/service-ui:5.3.4
+    image: reportportal/service-ui:5.3.5
     environment:
       - RP_SERVER_PORT=8080
     labels:
@@ -230,9 +229,9 @@ services:
     #  - '9000:9000'
     volumes:
      # For unix host
-      - ./data/storage:/data
+#      - ./data/storage:/data
      # For windows host
-      #- miniodata:/data
+      - minio:/data
     environment:
       MINIO_ACCESS_KEY: minio
       MINIO_SECRET_KEY: minio123
@@ -245,7 +244,7 @@ services:
     restart: always
 
   # Docker volume for Windows host
-#volumes:
-#  postgresdata:
-#  miniodata:
-#  elasticsearchdata:
+volumes:
+  elasticsearch:
+  postgres:
+  minio:
