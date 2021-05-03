@@ -19,7 +19,11 @@ import org.testng.annotations.AfterTest;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
+
+import static listeners.ExtentBasic.ExtentReporterCls.ReportFolderName;
 
 
 public class base_redefined {
@@ -35,16 +39,18 @@ public class base_redefined {
     }
 
     public String getscreenshot(String TestCaseName,WebDriver driver) throws IOException {
-/*        Date d = new Date();
-        SimpleDateFormat SDF = new SimpleDateFormat("MMMM-dd-yyyy");
-        String ReportFolderName = SDF.format(d);*/
+        Date d = new Date();
+        SimpleDateFormat SDF = new SimpleDateFormat("HH_mm_ss");
+        String random = SDF.format(d);
         TakesScreenshot screenshot = (TakesScreenshot)driver;
         File source = screenshot.getScreenshotAs(OutputType.FILE);
-        String destination = System.getProperty("user.dir")+"/HtmlReports/Extent/"+ ExtentReporterCls.ReportFolderName +TestCaseName+".png";
-        System.out.println("Screenshot path:" +destination);
-        File file = new File(destination);
+        String Image = System.getProperty("user.dir")+"/HtmlReports/Extent/"+ ReportFolderName+"/"+TestCaseName+random+".png";
+       System.out.println("Screenshot path:" +Image);
+        File file = new File(Image);
         FileUtils.copyFile(source,file);
-        return destination;
+
+        //Returing the Absolute path of Image as string
+        return Image;
 
     }
 

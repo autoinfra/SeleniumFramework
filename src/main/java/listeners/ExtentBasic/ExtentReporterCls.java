@@ -14,10 +14,10 @@ public class ExtentReporterCls {
     public static ExtentReports ReportGenerator(String Testname)
     {
         Date d = new Date();
-        //SimpleDateFormat SDF = new SimpleDateFormat("yyyy-MMM-dd_HH_mm");
-        SimpleDateFormat SDF = new SimpleDateFormat("MMMM-dd-yyyy");
+        SimpleDateFormat SDF = new SimpleDateFormat("yyyy-MMM-dd_HH_mm");
+        //SimpleDateFormat SDF = new SimpleDateFormat("MMMM-dd-yyyy");
         ReportFolderName = SDF.format(d);
-        String path = "HtmlReports/Extent/"+ReportFolderName+Testname+"Report.html";
+        String path = "HtmlReports/Extent/"+ReportFolderName+"/"+Testname+"Report.html";
         ExtentSparkReporter ESR = new ExtentSparkReporter(path);
         ESR.config().setReportName("Test Automation Results");
         ESR.config().setDocumentTitle(SDF+"Test Results");
