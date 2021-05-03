@@ -1,17 +1,22 @@
 package listeners.ExtentBasic;
 
 
+import base.base_redefined;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import lombok.SneakyThrows;
+import org.openqa.selenium.WebDriver;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class ExtentListener implements ITestListener, ISuiteListener {
+import java.io.IOException;
+
+public class ExtentListener extends base_redefined implements ITestListener, ISuiteListener {
     ITestContext ITC;
     ExtentReports extent = ExtentReporterCls.ReportGenerator("AutoInfraHTMLReport");
     ExtentTest test;
@@ -40,16 +45,29 @@ public class ExtentListener implements ITestListener, ISuiteListener {
 
     }
 
+    @SneakyThrows
     @Override
     public void onTestSuccess(ITestResult result) {
         LocalThread.get().log(Status.PASS,"------------TEST CASE PASSED------------");
+        WebDriver driver = null;
+        Object TestObject = result.getInstance();
+        Class CurrentClass = result.getTestClass().getRealClass();
+        driver = (WebDriver)CurrentClass.getDeclaredField("driver").get(TestObject);
+        LocalThread.get().addScreenCaptureFromPath(getscreenshot(result.getMethod().getMethodName(),driver));
 
     }
 
+    @SneakyThrows
     @Override
     public void onTestFailure(ITestResult result) {
 
         LocalThread.get().fail(result.getThrowable());
+        WebDriver driver = null;
+        Object TestObject = result.getInstance();
+        Class clasname = result.getTestClass().getRealClass();
+              driver = (WebDriver)clasname.getDeclaredField("driver").get(TestObject);
+              LocalThread.get().addScreenCaptureFromPath(getscreenshot(result.getMethod().getMethodName(),driver),result.getMethod().getMethodName());
+
 
     }
 
@@ -59,9 +77,12 @@ public class ExtentListener implements ITestListener, ISuiteListener {
 
     }
 
+    @SneakyThrows
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-
+       /* System.out.println("TEST MESSAGE");
+        LocalThread.get().fail(result.getThrowable());*/
+        LocalThread.get().addScreenCaptureFromPath("/mnt/7CBEB2A4BEB2567C/Frameworks/AutoInfra/SeleniumFramework/Documentation/images/Kibana1.png");
     }
 
     @Override
