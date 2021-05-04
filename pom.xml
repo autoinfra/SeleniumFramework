@@ -58,7 +58,24 @@
             </properties>-->
         </profile>
     </profiles>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>bintray-healenium</id>
+            <url>http://dl.bintray.com/epam/healenium</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>bintray-epam-healenium</id>
+            <name>bintray</name>
+            <url>https://dl.bintray.com/epam/healenium</url>
+        </repository>
+
             <repository>
                 <snapshots>
                     <enabled>false</enabled>
@@ -113,7 +130,15 @@
             <artifactId>log4j-api</artifactId>
             <version>2.13.0</version>
         </dependency>
-<!--REPORTPORTAL-->
+
+<!--        HEALENIUM-->
+        <dependency>
+            <groupId>com.epam.healenium</groupId>
+            <artifactId>healenium-web</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
+        <!--REPORTPORTAL-->
         <dependency>
             <groupId>com.epam.reportportal</groupId>
             <artifactId>agent-java-testng</artifactId>
@@ -196,8 +221,31 @@
 
         <finalName>AutoInfra-docker</finalName>
 <!--        <pluginManagement>-->
+
         <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
+                <plugin>
+                    <groupId>com.epam.healenium</groupId>
+                    <artifactId>hlm-report-mvn</artifactId>
+                    <version>1.1</version>
+                    <executions>
+                        <execution>
+                            <id>hlmReport</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>initReport</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>hlmReportB</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>buildReport</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
