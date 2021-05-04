@@ -18,17 +18,19 @@
 > — Fatory design pattern to initialize webdriver
 
 
-### System and Software Requirements
-1. Docker v17 and above.
-2. Intellij
-3. Azure DevOps Account
-4. PowerBI Account
-5. PowerApps Account
-6. Jenkins
-7. SonarQube
-8. ReportPortal.io
-9. Grafana + InfluxDB
-10. Elastic Search + Kibana
+### Some Interesting Tools Used in this fraework
+1.  Docker v17 and above.
+2.  Intellij
+3.  [**Azure DevOps For Continuous Integration**](https://www.linkedin.com/pulse/run-selenium-tests-azuredevops-bhargav-murari) <br>
+4.  [**PowerBI For Streaming Test Results**](https://www.linkedin.com/pulse/stream-test-results-powerbi-watch-live-from-mobile-app-bhargav-murari) <br>
+5.  Jenkins
+6.  [**SonarQube For Bug Free Automation Code**](https://www.linkedin.com/pulse/test-automation-write-bug-free-code-maintain-quality-bhargav-murari) <br>
+7.  [**ReportPortal.io For Machine Learning Reports**](https://www.linkedin.com/pulse/test-automation-how-achieve-machine-learning-bhargav-murari) <br>
+8.  Grafana + InfluxDB
+9.  Elastic Search + Kibana
+10. [**Healenium For Self Healing Selenium**](https://www.linkedin.com/pulse/self-healing-selenium-healenium-opensource-test-solution-murari) <br>
+11. Jira
+
 
 <h2 align="center">Project Architecture</h2>
 
@@ -54,7 +56,7 @@
 
 ![Kibana Dashboard](./Documentation/images/GrafanaReport.PNG "Grafana Reports")
 
-<h2 align="Left">Project Supporters</h2>
+<h2 align="Left">Extent Reports</h2>
 
-![Alt text](./Documentation/images/jetbrains.png "JET BRAINS")
+![Alt text](./Documentation/images/ExtentReport.png "JET BRAINS")
 
