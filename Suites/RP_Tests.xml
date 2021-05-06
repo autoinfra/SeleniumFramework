@@ -3,11 +3,13 @@
 <suite name="RP Tests">
 
     <listeners>
-<!--    	<listener class-name="listeners.TestNGlisteners"/>
+<!--
+
      	<listener class-name="listeners.Grafana.grafanalistener"/>
-     	<listener class-name="listeners.Elastic.ElasticListener"/>-->
+     	<listener class-name="listeners.Elastic.ElasticListener"/>
         <listener class-name="utilities.Jira.IssueStatusListener"></listener>
 	    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
+-->
     </listeners>
  <test name="Amazon">
     <classes>
