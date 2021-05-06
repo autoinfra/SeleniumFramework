@@ -35,9 +35,9 @@ public class SearchTest extends base_redefined {
     }
 
     @SneakyThrows
-    @Test//(description = "DuckDuckSearch" , retryAnalyzer= retry.class)
+    @Test(description = "DuckDuckSearch" , retryAnalyzer= retry.class)
     @Parameters({"keywordToSearch"})
-    public void search(String keywordfromTestNG) {
+    public void searchInDuckDuckGo(String keywordfromTestNG) {
         SearchPage SP = new SearchPage(driver);
         SP.goTo();
         SP.doSearch(keywordfromTestNG);
