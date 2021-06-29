@@ -1,3 +1,5 @@
+package com;
+
 import com.epam.reportportal.message.ReportPortalMessage;
 import lombok.SneakyThrows;
 import org.apache.logging.log4j.LogManager;
@@ -7,8 +9,6 @@ import org.testng.annotations.Test;
 import rp.com.google.common.io.BaseEncoding;
 import rp.com.google.common.io.Files;
 import rp.com.google.common.io.Resources;
-import utilities.Jira.Issue;
-
 import java.io.File;
 
 public class ReportPortal_Logging {
@@ -24,8 +24,7 @@ public class ReportPortal_Logging {
     }
 
     @SneakyThrows
-    @Issue("AUTOINFRA-5")
-    @Test(dependsOnMethods = "logXmlFile")
+    @Test
     public void logJsonBase64() {
         /* here we are logging some binary data as BASE64 string */
         LOGGER.info("RP_MESSAGE#BASE64#{}#{}",
@@ -34,7 +33,7 @@ public class ReportPortal_Logging {
     }
 
     @SneakyThrows
-    @Test(dependsOnMethods = "logJsonBase64")
+    @Test
     public void logJsonFile()  {
         /* here we are logging some binary data as file (useful for selenium) */
         File file = File.createTempFile("rp-test", ".json");

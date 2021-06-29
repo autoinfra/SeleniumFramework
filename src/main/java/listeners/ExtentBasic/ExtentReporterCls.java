@@ -24,6 +24,7 @@ public class ExtentReporterCls {
         extent = new ExtentReports();
         extent.attachReporter(ESR);
         extent.setSystemInfo("Tester",System.getProperty("user.name"));
+        extent.setSystemInfo("OS",System.getProperty("os.name"));
         return extent;
 
     }

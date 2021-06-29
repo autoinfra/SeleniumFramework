@@ -13,7 +13,7 @@ public class IssueTracker {
     public static final String Token = "eMTQ5AYdDUTJAOlYW5lG8158";
 
     @SneakyThrows
-    public static String getStatus(String IssueID) {
+    public static String getWorkItemStatus(String IssueID) {
         String JiraIssueStatus = "READY_TO_TEST";
 
         try {

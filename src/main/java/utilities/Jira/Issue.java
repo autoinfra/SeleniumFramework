@@ -6,7 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
+
 @Target(ElementType.METHOD)
 public @interface Issue {
-    String value() default "";
+    String IssueID() default "";
+    String ReTest() default "false";
+
 }

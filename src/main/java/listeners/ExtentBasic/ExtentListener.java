@@ -53,7 +53,7 @@ public class ExtentListener extends base_redefined implements ITestListener, ISu
         Object TestObject = result.getInstance();
         Class CurrentClass = result.getTestClass().getRealClass();
         driver = (WebDriver)CurrentClass.getDeclaredField("driver").get(TestObject);
-        LocalThread.get().addScreenCaptureFromPath(getscreenshot(result.getMethod().getMethodName(),driver));
+        LocalThread.get().addScreenCaptureFromPath(getscreenshot(ITC.getName(),driver),ITC.getName());
 
     }
 
@@ -66,7 +66,7 @@ public class ExtentListener extends base_redefined implements ITestListener, ISu
         Object TestObject = result.getInstance();
         Class clasname = result.getTestClass().getRealClass();
               driver = (WebDriver)clasname.getDeclaredField("driver").get(TestObject);
-              LocalThread.get().addScreenCaptureFromPath(getscreenshot(result.getMethod().getMethodName(),driver),result.getMethod().getMethodName());
+              LocalThread.get().addScreenCaptureFromPath(getscreenshot(ITC.getName(),driver),ITC.getName());
 
 
     }
@@ -92,7 +92,8 @@ public class ExtentListener extends base_redefined implements ITestListener, ISu
 
     @Override
     public void onStart(ITestContext context) {
-        test= extent.createTest(context.getName());
+       test= extent.createTest(context.getName());
+       this.ITC=context;
     }
 
     @Override

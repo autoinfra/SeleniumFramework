@@ -4,16 +4,14 @@
 
     <listeners>
 <!--
-
      	<listener class-name="listeners.Grafana.grafanalistener"/>
      	<listener class-name="listeners.Elastic.ElasticListener"/>
-        <listener class-name="utilities.Jira.IssueStatusListener"></listener>
+        <listener class-name="utilities.Jira.IssueStatusListener"></listener>-->
 	    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
--->
     </listeners>
- <test name="Amazon">
+ <test name="Report Portal log">
     <classes>
-      <class name="ReportPortal_Logging"/>
+      <class name="com.ReportPortal_Logging"/>
     </classes>
   </test>
 
