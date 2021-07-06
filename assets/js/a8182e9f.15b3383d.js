@@ -1,0 +1,1 @@
+(self.webpackChunkauto_infra=self.webpackChunkauto_infra||[]).push([[799],{6270:function(u){"use strict";u.exports=JSON.parse('{"allTagsPath":"/SeleniumFramework/blog/tags","slug":"docusaurus","name":"docusaurus","count":3,"permalink":"/SeleniumFramework/blog/tags/docusaurus"}')}}]);
