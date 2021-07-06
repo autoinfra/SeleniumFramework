@@ -1,0 +1,1 @@
+(self.webpackChunkauto_infra=self.webpackChunkauto_infra||[]).push([[629],{6422:function(a){"use strict";a.exports=JSON.parse('{"allTagsPath":"/seleniumframework/blog/tags","slug":"facebook","name":"facebook","count":1,"permalink":"/seleniumframework/blog/tags/facebook"}')}}]);
