@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class SearchPage {
+
     private WebDriver driver;
     private WebDriverWait wait;
     @FindBy(css = "input#search_form_input_homepage")

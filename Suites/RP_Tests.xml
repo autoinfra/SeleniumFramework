@@ -3,11 +3,8 @@
 <suite name="RP Tests">
 
     <listeners>
-<!--
-     	<listener class-name="listeners.Grafana.grafanalistener"/>
-     	<listener class-name="listeners.Elastic.ElasticListener"/>
-        <listener class-name="utilities.Jira.IssueStatusListener"></listener>-->
-	    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
+<!--<listener class-name="listeners.Elastic.ElasticListener"></listener>-->
+<!--	    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>-->
     </listeners>
  <test name="Report Portal log">
     <classes>
@@ -15,7 +12,6 @@
     </classes>
   </test>
 
-<!--    dplnjpkqu5z536bwtforbycw5vxgn26yxgues32pspivsgekk5wq-->
 
 
 </suite> <!-- Ecommerce_Test -->

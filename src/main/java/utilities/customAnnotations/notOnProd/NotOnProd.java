@@ -1,4 +1,4 @@
-package utilities.Jira;
+package utilities.customAnnotations.notOnProd;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,10 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-
 @Target(ElementType.METHOD)
-public @interface Issue {
-    String IssueID() default "";
-    String ReTest() default "false";
+
+public @interface NotOnProd {
 
 }

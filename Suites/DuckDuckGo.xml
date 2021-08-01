@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="DuckDuckGO Search">
+<suite name="DuckDuckGO Search" parallel="tests">
+    <parameter name="environment" value="prod"></parameter>
 
     <listeners>
 
@@ -9,23 +10,25 @@
 <!-- 	 <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>-->
 <!--     <listener class-name="listeners.ExtentBasic.ExtentListener"></listener>-->
 <!--     <listener class-name="listeners.PowerBI.PowerBI_Listener"/>-->
+<!--        <listener class-name="utilities.customAnnotations.Jira.IssueStatusListener"></listener>-->
+        <listener class-name="utilities.customAnnotations.notOnProd.notOnEnvListener"></listener>
 
     </listeners>
 
     <test name="Search-For-WebDriver">
         <parameter name="keywordToSearch" value="WebDriver" />
         <classes>
-            <class name="com.search.DuckDuck.SearchTest" />
+<!--            <class name="com.search.DuckDuck.SearchTest" />-->
+            <class name="com.search.DuckDuck.EnvironmentTest"></class>
         </classes>
     </test>
 
-    <test name="Search-For-Selenium">
+<!--    <test name="Search-For-Selenium">
         <parameter name="keywordToSearch" value="Selenium" />
         <classes>
             <class name="com.search.DuckDuck.SearchTest" />
         </classes>
     </test>
-<!--
 
     <test name="Search-For-UFT">
         <parameter name="keywordToSearch" value="UFT" />
@@ -40,9 +43,7 @@
             <class name="com.search.DuckDuck.SearchTest" />
         </classes>
     </test>
--->
 
-<!--
     <test name="Search-For-Docker">
         <parameter name="keywordToSearch" value="Docker" />
         <classes>
@@ -55,8 +56,7 @@
         <classes>
             <class name="com.search.DuckDuck.SearchTest" />
         </classes>
-    </test>
--->
+    </test>-->
 
 </suite>
 

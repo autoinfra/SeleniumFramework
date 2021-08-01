@@ -7,7 +7,7 @@ public class ElasticResultSender {
 
     public static void send(final Elastic_Json_TestStatus testStatus){
         try {
-            RestAssured.baseURI="http://localhost:9200";
+            RestAssured.baseURI="http://localhost:9400";
             RestAssured.given()
                     .contentType(ContentType.JSON)
                     .body(testStatus)
@@ -15,8 +15,8 @@ public class ElasticResultSender {
                     .post("/app/suite");
 
         } catch (Exception e) {
-            //System.out.println("Unable to connect to Elastic Search Node");
-          //  e.printStackTrace();
+            System.out.println("Unable to connect to Elastic Search Node");
+            e.printStackTrace();
         }
     }
 

@@ -8,11 +8,15 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.CodeLanguage;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import lombok.SneakyThrows;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import rp.com.google.common.io.BaseEncoding;
+import rp.com.google.common.io.Resources;
 
 import java.io.IOException;
 
@@ -20,9 +24,7 @@ public class ExtentListener extends base_redefined implements ITestListener, ISu
     ITestContext ITC;
     ExtentReports extent = ExtentReporterCls.ReportGenerator("AutoInfraHTMLReport");
     ExtentTest test;
-    //ExtentTest test= extent.createTest("SingleRater");
     ExtentTest node;
-    ITestResult result;
 
     //creating thread for 'test' object for parallel execution
    private static final ThreadLocal<ExtentTest> LocalThread = new ThreadLocal<ExtentTest>();
@@ -82,7 +84,6 @@ public class ExtentListener extends base_redefined implements ITestListener, ISu
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
        /* System.out.println("TEST MESSAGE");
         LocalThread.get().fail(result.getThrowable());*/
-        LocalThread.get().addScreenCaptureFromPath("/mnt/7CBEB2A4BEB2567C/Frameworks/AutoInfra/SeleniumFramework/Documentation/images/Kibana1.png");
     }
 
     @Override

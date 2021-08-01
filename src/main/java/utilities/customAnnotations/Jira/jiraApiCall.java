@@ -1,4 +1,4 @@
-package utilities.Jira;
+package utilities.customAnnotations.Jira;
 
 import io.restassured.response.Response;
 import lombok.SneakyThrows;
@@ -7,10 +7,10 @@ import java.io.File;
 
 import static io.restassured.RestAssured.given;
 
-public class IssueTracker {
-    private static final String ISSUE_TRACKER_API_BASE_URL = "https://bhargavm65.atlassian.net/rest/api/3/issue/";
-    private static final String Username = "bhargav.udemy@gmail.com";
-    public static final String Token = "eMTQ5AYdDUTJAOlYW5lG8158";
+public class jiraApiCall {
+    private static final String ISSUE_TRACKER_API_BASE_URL = "URL";
+    private static final String Username = "USERNAME";
+    public static final String Token = "PWD";
 
     @SneakyThrows
     public static String getWorkItemStatus(String IssueID) {

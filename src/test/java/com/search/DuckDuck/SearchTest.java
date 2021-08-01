@@ -2,19 +2,16 @@ package com.search.DuckDuck;
 
 import base.base_redefined;
 import com.duckduckgo.pages.SearchPage;
-import com.epam.healenium.SelfHealingDriver;
-import javafx.scene.shape.MoveTo;
 import lombok.SneakyThrows;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import utilities.retry;
+import utilities.customAnnotations.Jira.JiraIssue;
 
 import java.util.concurrent.TimeUnit;
 
@@ -45,7 +42,8 @@ public class SearchTest extends base_redefined {
     }
 
     @SneakyThrows
-    @Test(description = "DuckDuckSearch" , retryAnalyzer= retry.class)
+    @JiraIssue(IssueID = "AUTOINFRA-4")
+    @Test(description = "DuckDuckSearch")
     @Parameters({"keywordToSearch"})
     public void searchInDuckDuckGo(String keywordfromTestNG) {
         SearchPage SP = new SearchPage(driver);
@@ -56,5 +54,6 @@ public class SearchTest extends base_redefined {
         Assert.assertTrue(size <100 );
 
     }
+
 
 }

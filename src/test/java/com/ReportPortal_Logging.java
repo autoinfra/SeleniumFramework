@@ -16,6 +16,7 @@ public class ReportPortal_Logging {
     private static final Logger LOGGER = LogManager.getLogger(ReportPortal_Logging.class);
     public static final String JSON_FILE_PATH = "files/file.json";
     public static final String XML_FILE_PATH = "Suites/DuckDuckGo.xml";
+    public static final String IMAGE_FILE_PATH = "files/image.png";
 
     @SneakyThrows
     @Test
@@ -30,6 +31,16 @@ public class ReportPortal_Logging {
         LOGGER.info("RP_MESSAGE#BASE64#{}#{}",
                 BaseEncoding.base64().encode(Resources.asByteSource(Resources.getResource(JSON_FILE_PATH)).read()),
                 "I'm logging content via BASE64");
+    }
+
+    @SneakyThrows
+    @Test
+    public void logimage() {
+
+        LOGGER.info(
+                "RP_MESSAGE#BASE64#{}#{}",
+                BaseEncoding.base64().encode(Resources.asByteSource(Resources.getResource(IMAGE_FILE_PATH)).read()),
+                "Attaching Image");
     }
 
     @SneakyThrows

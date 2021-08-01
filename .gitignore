@@ -25,3 +25,5 @@ Documentation Files
 /zebrunner/
 /DockerFiles/portainer/volumes/
 /DockerFiles/reportportal/yaml/data/
+/DockerFiles/elasticsearch/data/
+/DockerFiles/grafana/data/
