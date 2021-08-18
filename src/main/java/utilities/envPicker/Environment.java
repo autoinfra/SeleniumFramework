@@ -4,7 +4,8 @@ import org.aeonbits.owner.Config;
 
 @Config.Sources({
 //NOTE - COMPLILE THE PROJECT BEFORE TRYING TO READ PROP FILES
-        "classpath:environment/${env}.properties"
+
+        "file:${user_dir}/src/main/resources/environment/${env}.properties",
 })
 public interface Environment extends Config {
 

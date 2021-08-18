@@ -23,8 +23,8 @@ public class EnvironmentTest {
     @BeforeTest
     @Parameters({"environment"})
     public void beforeTest(String environemnt) {
-        //Envrn=environemnt;
         ConfigFactory.setProperty("env", environemnt);
+        ConfigFactory.setProperty("user_dir", System.getProperty("user.dir"));
         testEnvironment = ConfigFactory.create(Environment.class);
     }
 

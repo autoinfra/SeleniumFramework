@@ -29,6 +29,7 @@ public class SearchTest extends base_redefined {
     @SneakyThrows
     public void InitializeDriver()
     {
+
 /*        webDriver=SetupDriver();
         //creating a delegate, this holds the instance of selenium webdriver
         driver = SelfHealingDriver.create(webDriver);
@@ -51,7 +52,7 @@ public class SearchTest extends base_redefined {
         SP.doSearch(keywordfromTestNG);
         SP.goToVideos();
         int size = SP.printResult();
-        Assert.assertTrue(size <100 );
+        Assert.assertTrue(size >100 );
 
     }
 
