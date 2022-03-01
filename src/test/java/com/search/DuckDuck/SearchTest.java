@@ -21,31 +21,10 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class SearchTest extends base_redefined {
-    //public WebDriver driver - Disabling this in favour of Healenium
-/*     public WebDriver webDriver;
-    public SelfHealingDriver driver; //healenium webdriver*/
-
 
     public WebDriver driver;
 
     private static final Logger LOGGER = LogManager.getLogger(SearchTest.class);
-
-    @BeforeTest
-    @SneakyThrows
-    public void InitializeDriver()
-    {
-
-/*        webDriver=SetupDriver();
-        //creating a delegate, this holds the instance of selenium webdriver
-        driver = SelfHealingDriver.create(webDriver);
-        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-        driver.manage().window().setSize(new Dimension(1200, 800));*/
-
-        driver=SetupDriver();
-        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-        driver.manage().window().setSize(new Dimension(1200, 800));
-
-    }
 
     @SneakyThrows
     @JiraIssue(IssueID = "AUTOINFRA-4")

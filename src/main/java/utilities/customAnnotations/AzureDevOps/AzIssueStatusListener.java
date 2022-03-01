@@ -23,7 +23,7 @@ public class AzIssueStatusListener  implements IInvokedMethodListener {
                 .getAnnotation(AzureDevOpsIssue.class);
 
         if (null != issueid) {
-            if(str_READY_TO_TEST.equalsIgnoreCase(AzDevOpsApiCall.getWorkItemStatus(issueid.AzIssueID()))){
+            if(str_READY_TO_TEST.equalsIgnoreCase(AzDevOpsApiCall.getWorkItemStatus(issueid.BudID()))){
                 switch(testResult.getStatus()){
                     case ITestResult.FAILURE:
                         // no need to fail as we might have expected this already.

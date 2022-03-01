@@ -8,6 +8,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface AzureDevOpsIssue {
-    String AzIssueID() default "";
-    String AzIssueType() default "Bug";
+    int WorkItemID() default 0;
+    int BudID() default 0;
 }
