@@ -10,91 +10,28 @@
     <version>1.0-SNAPSHOT</version>
     <name>SeleniumFramework</name>
     <url>https://github.com/AutoInfra/SeleniumFramework</url>
-<!--
-    <profiles>
-        <profile>
-            <id>drill</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-                <property>
-                    <name>env</name>
-                    <value>dev</value>
-                </property>
-            </activation>
-            <pluginRepositories>
-                <pluginRepository>
-                    <id>drill</id>
-                    <url>https://oss.jfrog.org/artifactory/list/oss-release-local</url>
-                </pluginRepository>
-            </pluginRepositories>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.epam.drill.agent.runner</groupId>
-                        <artifactId>maven</artifactId>
-                        <version>0.2.0</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>autotest</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <drill>
-                                <version>0.9.1</version>
-                                <agentId>ExampleAgentId</agentId>
-                                <adminHost>localhost</adminHost>
-                                <adminPort>8090</adminPort>
-                                <logLevel>TRACE</logLevel>
-                                <logFile>drillLog.log</logFile>
-                            </drill>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-&lt;!&ndash;            <properties>
-                &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;
-                <extraArgs>${argLine}</extraArgs> // expose to surfire if needed
-            </properties>&ndash;&gt;
-        </profile>
-    </profiles>
-
-    <pluginRepositories>
-        <pluginRepository>
-            <id>bintray-healenium</id>
-            <url>http://dl.bintray.com/epam/healenium</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-epam-healenium</id>
-            <name>bintray</name>
-            <url>https://dl.bintray.com/epam/healenium</url>
-        </repository>
-
-            <repository>
-                <snapshots>
-                    <enabled>false</enabled>
-                </snapshots>
-                <id>bintray-epam-reportportal</id>
-                <name>bintray</name>
-                <url>http://dl.bintray.com/epam/reportportal</url>
-            </repository>
-        </repositories>
--->
 
     <properties>
         <sonar.projectKey>AutoInfra_SeleniumFramework</sonar.projectKey>
         <sonar.organization>autoinfra-sonarcloud-key</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <aspectj.version>1.8.10</aspectj.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.22.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.15.0</version>
+        </dependency>
 
         <dependency>
             <groupId>commons-io</groupId>
@@ -112,7 +49,6 @@
             <groupId>org.aeonbits.owner</groupId>
             <artifactId>owner</artifactId>
             <version>1.0.8</version>
-<!--            <url>http://owner.aeonbits.org/</url>-->
         </dependency>
 
 
@@ -120,7 +56,6 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.1.0</version>
-            <!--     <scope>test</scope> -->
         </dependency>
 
         <dependency>
@@ -235,28 +170,6 @@
         <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
-                    <groupId>com.epam.healenium</groupId>
-                    <artifactId>hlm-report-mvn</artifactId>
-                    <version>1.1</version>
-                    <executions>
-                        <execution>
-                            <id>hlmReport</id>
-                            <phase>compile</phase>
-                            <goals>
-                                <goal>initReport</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>hlmReportB</id>
-                            <phase>test</phase>
-                            <goals>
-                                <goal>buildReport</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-
-                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.7.0</version>
@@ -308,17 +221,25 @@
                     <version>3.0.0-M4</version>
                     <configuration>
                         <suiteXmlFiles>
-<!--                            <suiteXmlFile>./Suites/MercuryTours.xml</suiteXmlFile>-->
                             <suiteXmlFile>./Suites/DuckDuckGo.xml</suiteXmlFile>
                         </suiteXmlFiles>
+                        <argLine>
+                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        </argLine>
                         <properties>
-
                             <property>
                                 <name>usedefaultlisteners</name>
                                 <value>false</value>
                             </property>
                         </properties>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.aspectj</groupId>
+                            <artifactId>aspectjweaver</artifactId>
+                            <version>${aspectj.version}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
 
                 <plugin>
