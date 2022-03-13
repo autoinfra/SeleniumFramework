@@ -8,24 +8,16 @@
 <!--     <listener class-name="listeners.Grafana.grafanalistener"/>-->
 <!--     <listener class-name="listeners.Elastic.ElasticListener"/>-->
 <!-- 	 <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>-->
-     <listener class-name="listeners.ExtentBasic.ExtentListener"></listener>
-        <listener class-name="listeners.Allure.Allurelistener"></listener>
+     <listener class-name="listeners.MicrosoftTeams.Listener"></listener>
+<!--        <listener class-name="listeners.Allure.Allurelistener"></listener>-->
 <!--     <listener class-name="listeners.PowerBI.PowerBI_Listener"/>-->
 <!--        <listener class-name="utilities.customAnnotations.Jira.IssueStatusListener"></listener>-->
 <!--        <listener class-name="utilities.customAnnotations.notOnProd.notOnEnvListener"></listener>-->
 
     </listeners>
 
-    <test name="Search-For-WebDriver">
-        <parameter name="keywordToSearch" value="WebDriver" />
 
-        <classes>
-            <class name="com.search.DuckDuck.EnvironmentTest" />
-<!--            <class name="com.search.DuckDuck.EnvironmentTest"></class>-->
-        </classes>
-    </test>
-
-<!--    <test name="Search-For-Selenium">
+    <test name="Search-For-Selenium">
         <parameter name="keywordToSearch" value="Selenium" />
         <classes>
             <class name="com.search.DuckDuck.SearchTest" />
@@ -58,7 +50,7 @@
         <classes>
             <class name="com.search.DuckDuck.SearchTest" />
         </classes>
-    </test>-->
+    </test>
 
 </suite>
 

@@ -2,6 +2,7 @@ package com.search.DuckDuck;
 
 import base.base_redefined;
 import com.duckduckgo.pages.SearchPage;
+import com.epam.reportportal.annotations.attribute.Attributes;
 import lombok.SneakyThrows;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,6 +27,7 @@ public class SearchTest extends base_redefined {
 
     private static final Logger LOGGER = LogManager.getLogger(SearchTest.class);
 
+    @Attributes
     @SneakyThrows
     @JiraIssue(IssueID = "AUTOINFRA-4")
     //@AzureDevOpsIssue(AzIssueID="DummyID")
