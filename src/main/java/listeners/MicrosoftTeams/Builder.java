@@ -1,19 +1,25 @@
 package listeners.MicrosoftTeams;
 
-import org.testng.ITestResult;
-
 import java.util.Arrays;
+import java.util.List;
+
+import static listeners.MicrosoftTeams.AdaptiveCardReqBody.*;
 
 public class Builder {
 
-    ITestResult result;
+    List<ItemsItem> TestCaseName;
+    List<ItemsItem> TestCaseID;
+    List<ItemsItem> TestResult;
 
-    public Builder(ITestResult result) {
-        this.result = result;
+    public Builder(List<ItemsItem> testCaseName, List<ItemsItem> testCaseID, List<ItemsItem> testResult) {
+        TestCaseName = testCaseName;
+        TestCaseID=testCaseID;
+        TestResult=testResult;
+
     }
 
     public AdaptiveCardReqBody reqBody(){
-        return AdaptiveCardReqBody.builder()
+        return builder()
                 .type("message")
                 .attachments(Arrays.asList(attachments()))
                 .build();
@@ -30,10 +36,9 @@ public class Builder {
     public Content content(){
         return Content.builder()
                 .type("AdaptiveCard")
-                .body(Arrays.asList(banner(),factSetBody(),headings(),testcases(result), buttons()))
+                .body(Arrays.asList(banner(),factSetBody(),headings(),testcases(), buttons()))
                 .build();
     }
-
 
     public BodyItem banner(){
 
@@ -127,7 +132,7 @@ public class Builder {
                 .type("TextBlock")
                 .text("Result")
                 .weight("Bolder")
-                .color("attention")
+                .color("dark")
                 .wrap(true)
                 .build();
 
@@ -158,32 +163,22 @@ public class Builder {
                 .build();
     }
 
-    public BodyItem testcases(ITestResult result){
-        ItemsItem itemsItem1 = ItemsItem.builder()
+    public BodyItem testcases(){
+
+/*        ItemsItem testCaseID = ItemsItem.builder()
                 .type("TextBlock")
                 .text("[14567](https://adaptivecards.io)")
                 .weight("Bolder")
                 .wrap(true)
-                .build();
+                .build();*/
 
-        ColumnsItem columnsItem1 = ColumnsItem.builder()
-                .type("Column")
-                .items(Arrays.asList(itemsItem1))
-                .width("auto").build();
-
-
-        ItemsItem itemsItem2 = ItemsItem.builder()
+/*        ItemsItem testCaseName = ItemsItem.builder()
                 .type("TextBlock")
-                .text( result.getMethod().getMethodName())
+                .text("TestCase Description")
                 .weight("Bolder")
                 .wrap(true)
-                .build();
-
-        ColumnsItem columnsItem2 = ColumnsItem.builder()
-                .type("Column")
-                .spacing("medium")
-                .items(Arrays.asList(itemsItem2))
-                .width("stretch").build();
+                .build();*/
+/*
 
         ItemsItem itemsItemcol3 = ItemsItem.builder()
                 .type("TextBlock")
@@ -192,12 +187,25 @@ public class Builder {
                 .color("attention")
                 .wrap(true)
                 .build();
+*/
+
+
+        ColumnsItem columnsItem1 = ColumnsItem.builder()
+                .type("Column")
+                .items(TestCaseID)
+                .width("auto").build();
+
+        ColumnsItem columnsItem2 = ColumnsItem.builder()
+                .type("Column")
+                .spacing("medium")
+                .items(TestCaseName)
+                .width("stretch").build();
 
         ColumnsItem columnsItem33 = ColumnsItem.builder()
                 .type("Column")
                 .spacing("medium")
-                .items(Arrays.asList(itemsItemcol3))
-                .width("stretch").build();
+                .items(TestResult)
+                .width("auto").build();
 
 
         ItemsItem itemsItem = ItemsItem.builder()

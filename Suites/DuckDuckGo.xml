@@ -5,19 +5,12 @@
 
     <listeners>
 
-<!--     <listener class-name="listeners.Grafana.grafanalistener"/>-->
-<!--     <listener class-name="listeners.Elastic.ElasticListener"/>-->
-<!-- 	 <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>-->
      <listener class-name="listeners.MicrosoftTeams.Listener"></listener>
-<!--        <listener class-name="listeners.Allure.Allurelistener"></listener>-->
-<!--     <listener class-name="listeners.PowerBI.PowerBI_Listener"/>-->
-<!--        <listener class-name="utilities.customAnnotations.Jira.IssueStatusListener"></listener>-->
-<!--        <listener class-name="utilities.customAnnotations.notOnProd.notOnEnvListener"></listener>-->
 
     </listeners>
 
 
-    <test name="Search-For-Selenium">
+   <!-- <test name="Search-For-Selenium">
         <parameter name="keywordToSearch" value="Selenium" />
         <classes>
             <class name="com.search.DuckDuck.SearchTest" />
@@ -44,6 +37,14 @@
             <class name="com.search.DuckDuck.SearchTest" />
         </classes>
     </test>
+
+    <test name="Search-For-Kubernetes">
+        <parameter name="keywordToSearch" value="Kubernetes" />
+        <classes>
+            <class name="com.search.DuckDuck.SearchTest" />
+        </classes>
+    </test>
+-->
 
     <test name="Search-For-Kubernetes">
         <parameter name="keywordToSearch" value="Kubernetes" />

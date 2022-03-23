@@ -23,7 +23,6 @@ import java.util.concurrent.TimeUnit;
 
 public class SearchTest extends base_redefined {
 
-    public WebDriver driver;
 
     private static final Logger LOGGER = LogManager.getLogger(SearchTest.class);
 
@@ -32,7 +31,7 @@ public class SearchTest extends base_redefined {
     @JiraIssue(IssueID = "AUTOINFRA-4")
     //@AzureDevOpsIssue(AzIssueID="DummyID")
     //@NotOnProd
-    @Test(description = "DuckDuckSearch")
+    //@Test(description = "DuckDuckSearch")
     @Parameters({"keywordToSearch"})
     public void searchInDuckDuckGo(String keywordfromTestNG) {
         SearchPage SP = new SearchPage(driver);
@@ -41,6 +40,24 @@ public class SearchTest extends base_redefined {
         SP.goToVideos();
         int size = SP.printResult();
         Assert.assertTrue(size >100 );
+
+    }
+
+    @Test
+    public void LoginToPortal() {
+        Assert.assertTrue(true);
+
+    }
+
+    @Test
+    public void CreateCustomer() {
+        Assert.assertTrue(false);
+
+    }
+
+    @Test
+    public void AddBilling() {
+        Assert.assertTrue(true);
 
     }
 

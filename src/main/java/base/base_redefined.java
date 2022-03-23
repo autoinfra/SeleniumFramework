@@ -36,7 +36,7 @@ public class base_redefined {
         testEnvironment = ConfigFactory.create(Environment.class);
     }
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void InitializeDriver()
     {
         driver = DriverFactory.getDriver("CHROME");
