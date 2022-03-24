@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface AzureDevOpsIssue {
+public @interface AzureDevOps {
     int WorkItemID() default 0;
-    int BudID() default 0;
+    int BugID() default 0;
 }

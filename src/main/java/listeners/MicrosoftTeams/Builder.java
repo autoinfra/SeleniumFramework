@@ -10,11 +10,13 @@ public class Builder {
     List<ItemsItem> TestCaseName;
     List<ItemsItem> TestCaseID;
     List<ItemsItem> TestResult;
+    List<FactsItem> FactsItems;
 
-    public Builder(List<ItemsItem> testCaseName, List<ItemsItem> testCaseID, List<ItemsItem> testResult) {
+    public Builder(List<ItemsItem> testCaseName, List<ItemsItem> testCaseID, List<ItemsItem> testResult,List<FactsItem> factsItems ) {
         TestCaseName = testCaseName;
         TestCaseID=testCaseID;
         TestResult=testResult;
+        FactsItems=factsItems;
 
     }
 
@@ -86,30 +88,11 @@ public class Builder {
 
     public BodyItem factSetBody(){
 
-        FactsItem fact1 = FactsItem
-                .builder()
-                .title("Submitted By")
-                .value( "**Bhargav Murari**").build();
-
-        FactsItem fact2 = FactsItem
-                .builder()
-                .title("OS")
-                .value("**Windows**").build();
-
-        FactsItem fact3 = FactsItem
-                .builder()
-                .title("Run Date")
-                .value("**abc**").build();
-
-        FactsItem fact4 = FactsItem
-                .builder()
-                .title("Total Run Time")
-                .value("**10 Min**").build();
 
         return  BodyItem.builder()
                 .type("FactSet")
                 .spacing("Large")
-                .facts(Arrays.asList(fact1,fact2,fact3,fact4))
+                .facts(FactsItems)
                 .build();
     }
 
@@ -164,31 +147,6 @@ public class Builder {
     }
 
     public BodyItem testcases(){
-
-/*        ItemsItem testCaseID = ItemsItem.builder()
-                .type("TextBlock")
-                .text("[14567](https://adaptivecards.io)")
-                .weight("Bolder")
-                .wrap(true)
-                .build();*/
-
-/*        ItemsItem testCaseName = ItemsItem.builder()
-                .type("TextBlock")
-                .text("TestCase Description")
-                .weight("Bolder")
-                .wrap(true)
-                .build();*/
-/*
-
-        ItemsItem itemsItemcol3 = ItemsItem.builder()
-                .type("TextBlock")
-                .text("Failed")
-                .weight("Bolder")
-                .color("attention")
-                .wrap(true)
-                .build();
-*/
-
 
         ColumnsItem columnsItem1 = ColumnsItem.builder()
                 .type("Column")

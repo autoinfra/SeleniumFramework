@@ -27,3 +27,6 @@ Documentation Files
 /DockerFiles/reportportal/yaml/data/
 /DockerFiles/elasticsearch/data/
 /DockerFiles/grafana/data/
+ajcore*
+allure-results
+allure-report

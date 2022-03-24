@@ -6,20 +6,11 @@ import com.epam.reportportal.annotations.attribute.Attributes;
 import lombok.SneakyThrows;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import utilities.customAnnotations.AzureDevOps.AzureDevOpsIssue;
+import utilities.customAnnotations.AzureDevOps.AzureDevOps;
 import utilities.customAnnotations.Jira.JiraIssue;
-import utilities.customAnnotations.notOnProd.NotOnProd;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 public class SearchTest extends base_redefined {
 
@@ -43,20 +34,25 @@ public class SearchTest extends base_redefined {
 
     }
 
-    @Test
+    @AzureDevOps(WorkItemID = 123)
+    @Test(priority = 1)
     public void LoginToPortal() {
         Assert.assertTrue(true);
 
     }
 
-    @Test
+    @AzureDevOps(WorkItemID = 456)
+    @Test(priority = 2)
     public void CreateCustomer() {
         Assert.assertTrue(false);
 
     }
 
-    @Test
+    @SneakyThrows
+    @AzureDevOps(WorkItemID = 987)
+    @Test(priority = 3)
     public void AddBilling() {
+        Thread.sleep(70000);
         Assert.assertTrue(true);
 
     }
