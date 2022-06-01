@@ -47,6 +47,7 @@ public class SearchPage {
         //wait.until((d) -> videosLink.isDisplayed());
         wait.until(visibilityOf(videosLink));
         videosLink.click();
+        allVideos.stream().parallel().forEach(a->System.out.println(a.getText()));
     }
 
     public int printResult()

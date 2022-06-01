@@ -29,6 +29,20 @@ public class DriverFactory {
         return ChromeDriver;
     };
 
+    private static final Supplier<WebDriver> chromeDriverHeadless = () -> {
+
+        Map<String, Object> prefs = new HashMap<String, Object>();
+        prefs.put("profile.default_content_setting_values.notifications", 2);
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(true);
+        options.setExperimentalOption("prefs", prefs);
+        WebDriverManager.chromedriver().setup();
+        WebDriver ChromeDriver = new ChromeDriver(options);
+        ChromeDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        ChromeDriver.manage().window().setSize(new Dimension(1200, 800));
+        return ChromeDriver;
+    };
+
     private static final Supplier<WebDriver> firefoxDriverSupplier = () -> {
         WebDriver FirefoxDriver = new FirefoxDriver();
         FirefoxDriver.manage().timeouts().implicitlyWait(4,TimeUnit.SECONDS);
@@ -39,6 +53,7 @@ public class DriverFactory {
     static{
         driverMap.put("CHROME", chromeDriverSupplier);
         driverMap.put("FIREFOX", firefoxDriverSupplier);
+        driverMap.put("CHROME_HEADLESS",chromeDriverHeadless);
     }
 
     public static final WebDriver getDriver(String type){
