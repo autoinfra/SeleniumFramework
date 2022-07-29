@@ -5,46 +5,9 @@
 
     <listeners>
 
-     <listener class-name="listeners.MicrosoftTeams.Listener"></listener>
+     <listener class-name="listeners.Allure.Allurelistener"></listener>
 
     </listeners>
-
-
-   <!-- <test name="Search-For-Selenium">
-        <parameter name="keywordToSearch" value="Selenium" />
-        <classes>
-            <class name="com.search.DuckDuck.SearchTest" />
-        </classes>
-    </test>
-
-    <test name="Search-For-UFT">
-        <parameter name="keywordToSearch" value="UFT" />
-        <classes>
-            <class name="com.search.DuckDuck.SearchTest" />
-        </classes>
-    </test>
-
-    <test name="Search-For-QA">
-        <parameter name="keywordToSearch" value="QA" />
-        <classes>
-            <class name="com.search.DuckDuck.SearchTest" />
-        </classes>
-    </test>
-
-    <test name="Search-For-Docker">
-        <parameter name="keywordToSearch" value="Docker" />
-        <classes>
-            <class name="com.search.DuckDuck.SearchTest" />
-        </classes>
-    </test>
-
-    <test name="Search-For-Kubernetes">
-        <parameter name="keywordToSearch" value="Kubernetes" />
-        <classes>
-            <class name="com.search.DuckDuck.SearchTest" />
-        </classes>
-    </test>
--->
 
     <test name="Search-For-Kubernetes">
         <parameter name="keywordToSearch" value="Kubernetes" />

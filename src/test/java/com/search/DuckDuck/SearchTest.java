@@ -6,6 +6,7 @@ import lombok.SneakyThrows;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 public class SearchTest extends base_redefined {
 
@@ -13,7 +14,7 @@ public class SearchTest extends base_redefined {
     private static final Logger LOGGER = LogManager.getLogger(SearchTest.class);
 
     @SneakyThrows
-   // @Test(description = "DuckDuckSearch")
+   @Test(description = "DuckDuckSearch")
     @Parameters({"keywordToSearch"})
     public void searchInDuckDuckGo(String keywordfromTestNG) {
         SearchPage SP = new SearchPage(driver);
