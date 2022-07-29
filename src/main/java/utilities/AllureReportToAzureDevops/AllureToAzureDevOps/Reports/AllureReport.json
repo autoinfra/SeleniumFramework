@@ -1,0 +1,1997 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "About: ",
+    "children" : [ {
+      "name" : "117416:M:Validate user can navigate to the About Page using a menu item in the Settings menu",
+      "uid" : "a8dca157bf476520",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200239583,
+        "stop" : 1658200253221,
+        "duration" : 13638
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "117418:M:Validate about page shows a list of applications to which the user has permissions ",
+      "uid" : "ad42de6dd59403e",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200253223,
+        "stop" : 1658200259833,
+        "duration" : 6610
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "117544:M:Validate application version number is displayed next to the application name in the About page for each application",
+      "uid" : "b89d423070a15d77",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200259834,
+        "stop" : 1658200267066,
+        "duration" : 7232
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "117365,117367::Validate disclaimer text is loaded from a separate file (disclaimer.html)",
+      "uid" : "197524ff509d663d",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200267067,
+        "stop" : 1658200341713,
+        "duration" : 74646
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "119282:M:Settings - About - License information in the About page",
+      "uid" : "49bbfbd7be07e88a",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200341713,
+        "stop" : 1658200353557,
+        "duration" : 11844
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "119285::Settings - About - Validate attributions present in the about page ",
+      "uid" : "8558a6ed6caff38f",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200353557,
+        "stop" : 1658200441868,
+        "duration" : 88311
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "127694,127728::Validate when 'hideLicenseTerms' flag is set to 'true' license terms link from the about page is hidden",
+      "uid" : "88c5dadfe57e67cd",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200441868,
+        "stop" : 1658200588758,
+        "duration" : 146890
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "127704,127730::Validate when 'hideThirdPartyLicense' flag is set to 'true' 3rd Party license terms link from the about page is hidden",
+      "uid" : "b6ad002c5d1bc188",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200588759,
+        "stop" : 1658200707887,
+        "duration" : 119128
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "127725,127690::Validate when 'hideApplicationsList' flag is set to 'false' table which lists the available application and their versions is vissible",
+      "uid" : "e487e7d78b939f74",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200707887,
+        "stop" : 1658200832891,
+        "duration" : 125004
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "127727,127692::Validate when 'hideDisclaimer' flag is set to 'false' disclaimer section from the about page is vissible",
+      "uid" : "80a7e251d40d1779",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200832891,
+        "stop" : 1658200958646,
+        "duration" : 125755
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "128332,128333::Validate 'licenseTermsUrl' setting in config,json for About Page when the value is not empty",
+      "uid" : "a832c8f362c15687",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658200958646,
+        "stop" : 1658201088506,
+        "duration" : 129860
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "128334,128335::Validate 'thirdPartyLicenseUrl' setting in config,json for About Page when the value is not empty",
+      "uid" : "aa7ed587d61d6e00",
+      "parentUid" : "3e94a2440a94a8a59cc61fb923e98a51",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658201088506,
+        "stop" : 1658201218183,
+        "duration" : 129677
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "3e94a2440a94a8a59cc61fb923e98a51"
+  }, {
+    "name" : "Access Management(AAD): ",
+    "children" : [ {
+      "name" : "34722,228647:M:Create an entitlement and Add Description",
+      "uid" : "2b95ff6cfc37f6e6",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658201284073,
+        "stop" : 1658201299868,
+        "duration" : 15795
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "34725:M:Search for entitlements",
+      "uid" : "2448b32bce452b62",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658201299869,
+        "stop" : 1658201313899,
+        "duration" : 14030
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "34720:M:Add an entitlement to a user",
+      "uid" : "c4c37f4c970ff620",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658201313899,
+        "stop" : 1658201361825,
+        "duration" : 47926
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "34726::Search for users",
+      "uid" : "1e92a49c2d097e06",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658201361826,
+        "stop" : 1658201397956,
+        "duration" : 36130
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "228648:Validate descriptions for entitlements are visible in User Entitlements page",
+      "uid" : "d3b51fa2088e2c89",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658201397957,
+        "stop" : 1658201435819,
+        "duration" : 37862
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "34727:M:Remove an entitlement from a user",
+      "uid" : "8bf3dd5480dfef60",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658201435819,
+        "stop" : 1658201487842,
+        "duration" : 52023
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "34724:M:Delete an entitlement",
+      "uid" : "b8cb057b04b61ac9",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658201487842,
+        "stop" : 1658201511088,
+        "duration" : 23246
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "127882D::User email id should be shown for users in tool tip for administrator",
+      "uid" : "7eb0670889fd0cd4",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658201511088,
+        "stop" : 1658201529533,
+        "duration" : 18445
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "36371,36372::Check the access of a user with 'Access Application' entitlement and tenant Access Entitlement",
+      "uid" : "8642d964ab91f348",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658201529534,
+        "stop" : 1658201756006,
+        "duration" : 226472
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "36369::Check the access of a user without 'Access Application' entitlement",
+      "uid" : "c7d0c385f979c79d",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658201756006,
+        "stop" : 1658201896498,
+        "duration" : 140492
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "39926::Manage in Application page which applications all users have access to",
+      "uid" : "8a8d586710e6e4ff",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658201896498,
+        "stop" : 1658202245307,
+        "duration" : 348809
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "107223:M:Validate users which do not have the entitlements for Access Management can not see  \"Access Management\" in  Settings menu",
+      "uid" : "871679b0a32b613f",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658202245307,
+        "stop" : 1658202485131,
+        "duration" : 239824
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "228650,228652:Validate descriptions for roles are visible in the Roles page",
+      "uid" : "9ab8fdb277de1b0b",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658202485132,
+        "stop" : 1658202495026,
+        "duration" : 9894
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "245127:Validate there is a search box for Assets on the Privileges page in Access Management app",
+      "uid" : "b50be1714e4952fe",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658202495026,
+        "stop" : 1658202503402,
+        "duration" : 8376
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "159286:Validate loading indicator symbol is displayed when AD groups page is waiting to display the list of groups",
+      "uid" : "7aa003c7de43d2b9",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658202503402,
+        "stop" : 1658202511519,
+        "duration" : 8117
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "245149,245151,245420,:Validate users can specify the depth of search (1 level, 2 levels, All levels) for Assets on the Privileges page",
+      "uid" : "6776254b7f6cfb85",
+      "parentUid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658202511519,
+        "stop" : 1658202529075,
+        "duration" : 17556
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "6a6bd97d32a2d9fa7fadfd25ae79bb99"
+  }, {
+    "name" : "Access Management(IDP): ",
+    "children" : [ {
+      "name" : "23624,23632::Add an entitlement to a user through User Administration",
+      "uid" : "49a70e9e19cce1ac",
+      "parentUid" : "a1e0f0c4ba17bd73253680eade60e728",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658202654879,
+        "stop" : 1658202711471,
+        "duration" : 56592
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "23626::Refresh the list of entitlements for a user",
+      "uid" : "6d408147faca65c9",
+      "parentUid" : "a1e0f0c4ba17bd73253680eade60e728",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658202711471,
+        "stop" : 1658202802045,
+        "duration" : 90574
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "23631::Search for users",
+      "uid" : "6be0bcf5538266b0",
+      "parentUid" : "a1e0f0c4ba17bd73253680eade60e728",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658202802045,
+        "stop" : 1658202814462,
+        "duration" : 12417
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "23627,23629::Create and delete entitlement",
+      "uid" : "975f4e6fdd8a304b",
+      "parentUid" : "a1e0f0c4ba17bd73253680eade60e728",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658202814462,
+        "stop" : 1658202838985,
+        "duration" : 24523
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "23628::Refresh entitlements in Entitlements page",
+      "uid" : "556f3c29c73e0872",
+      "parentUid" : "a1e0f0c4ba17bd73253680eade60e728",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658202838986,
+        "stop" : 1658202858618,
+        "duration" : 19632
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "23630::Search for entitlements",
+      "uid" : "fa3afc64499740ec",
+      "parentUid" : "a1e0f0c4ba17bd73253680eade60e728",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658202858618,
+        "stop" : 1658202869837,
+        "duration" : 11219
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "127882::User email id should be shown for users in tool tip for administrator",
+      "uid" : "a25c122a1b1c8bb4",
+      "parentUid" : "a1e0f0c4ba17bd73253680eade60e728",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658202869838,
+        "stop" : 1658202876881,
+        "duration" : 7043
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "23633::Check the access of a user with System Administrator entitlement",
+      "uid" : "e9c872483f43f6e2",
+      "parentUid" : "a1e0f0c4ba17bd73253680eade60e728",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658202876881,
+        "stop" : 1658202909230,
+        "duration" : 32349
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "23635::Check the access of a user with Support User, User or no entitlement",
+      "uid" : "d604267cda32c145",
+      "parentUid" : "a1e0f0c4ba17bd73253680eade60e728",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658202909230,
+        "stop" : 1658202975526,
+        "duration" : 66296
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "107226::Validate users which do not have the entitlements for User Administration can not see  \"User Administration\" in  Settings menu",
+      "uid" : "728c0dac29875299",
+      "parentUid" : "a1e0f0c4ba17bd73253680eade60e728",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658202975527,
+        "stop" : 1658203079429,
+        "duration" : 103902
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "a1e0f0c4ba17bd73253680eade60e728"
+  }, {
+    "name" : "Analysis Validation:",
+    "children" : [ {
+      "name" : "21609::Access the application",
+      "uid" : "b0cda989cca88385",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203158163,
+        "stop" : 1658203172177,
+        "duration" : 14014
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "21610::Click and drag pan",
+      "uid" : "fe91a3cd0a5c683",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203172177,
+        "stop" : 1658203194742,
+        "duration" : 22565
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "21611::Click and drag zoom rectangle",
+      "uid" : "f55c02081bd8f53f",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203194742,
+        "stop" : 1658203219086,
+        "duration" : 24344
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "21612::Follow latest data",
+      "uid" : "3ff5cb48625a169f",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203219086,
+        "stop" : 1658203314345,
+        "duration" : 95259
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "21613::Remove added time series from the view",
+      "uid" : "cb77f7b65c4073d2",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203314345,
+        "stop" : 1658203347878,
+        "duration" : 33533
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "21614::Search in Galore Assets tree structure",
+      "uid" : "8c183f96ee9f757c",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203347878,
+        "stop" : 1658203379918,
+        "duration" : 32040
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "21615::Add time series from Asset tree structure",
+      "uid" : "50c5632745b41ff2",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203379918,
+        "stop" : 1658203407987,
+        "duration" : 28069
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "21619::Toggle graph visibility",
+      "uid" : "ef18951cb26b24f",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203407987,
+        "stop" : 1658203436996,
+        "duration" : 29009
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "21620::Use 'Copy Link' functionality",
+      "uid" : "856a7cf296dde91e",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203436996,
+        "stop" : 1658203461451,
+        "duration" : 24455
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "21621::Use zoom options",
+      "uid" : "968785bc237a6012",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203461451,
+        "stop" : 1658203491117,
+        "duration" : 29666
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "36873::Export time series data according to the configured interval to CSV file",
+      "uid" : "e4de0dd9bb9f72cc",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203491117,
+        "stop" : 1658203526928,
+        "duration" : 35811
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "36889::Export when 'Min/Max/Avg' aggregate type is selected",
+      "uid" : "52c1fc106edd3b9c",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203526928,
+        "stop" : 1658203563119,
+        "duration" : 36191
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "36891::Export when no aggregate type is selected",
+      "uid" : "5af55b787b07cf8e",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203563119,
+        "stop" : 1658203596958,
+        "duration" : 33839
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "36892::Export when 'Full statistics' aggregate type is selected",
+      "uid" : "741669c8ac661081",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203596958,
+        "stop" : 1658203632060,
+        "duration" : 35102
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "36915::Use function expressions in Export",
+      "uid" : "69b0ea2a77f218e9",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203632060,
+        "stop" : 1658203669970,
+        "duration" : 37910
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "36921::Use ranges in export that include or exclude the end points",
+      "uid" : "76fbac1f6dfe32b7",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203669970,
+        "stop" : 1658203706772,
+        "duration" : 36802
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "116262:M:Validate nodes which are not configured shows \"not configured\" icon.",
+      "uid" : "a86d61b1366bd148",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203706772,
+        "stop" : 1658203724716,
+        "duration" : 17944
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "116264:M:Validate tooltip on the node which shows the state as \"Not configured\" displayed..",
+      "uid" : "514dcd6776acaa28",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203724717,
+        "stop" : 1658203747040,
+        "duration" : 22323
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "116321:M:Validate right click on a node shows a context menu with a command \"Show configured tags\".",
+      "uid" : "87f9b64b72aa1ecc",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203747040,
+        "stop" : 1658203772551,
+        "duration" : 25511
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "46287,46336,46515::Verify Analysis has a \"to\" and \"from\" date selector",
+      "uid" : "2101ecf0343e396",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203772551,
+        "stop" : 1658203814153,
+        "duration" : 41602
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "99923,99924,99926,99938,99942:M:Verify that legend box can be collapsed to the bottom of the screen and then expanded",
+      "uid" : "8764ca26d5cddb6",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203814153,
+        "stop" : 1658203887542,
+        "duration" : 73389
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "116321,129923,130391:M:Validate right click on a node shows a context menu with a command \"Show configured tags\".",
+      "uid" : "7c773f89d7dbb8eb",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203887542,
+        "stop" : 1658203913917,
+        "duration" : 26375
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "130393,130403:M:Validate clicking on 'Show vessel data' a modal popup opens up",
+      "uid" : "d89fae7a807ddc73",
+      "parentUid" : "12c7b2fc77824c532d45aab79b7e7c39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658203913917,
+        "stop" : 1658203931018,
+        "duration" : 17101
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "12c7b2fc77824c532d45aab79b7e7c39"
+  }, {
+    "name" : "Theme settings from Config Validation: ",
+    "children" : [ {
+      "name" : "122024::Validate if user choice is not made applications looks for config file \"selectedTheme\" in config.json",
+      "uid" : "22b42834d2f24332",
+      "parentUid" : "62f47106f13606b5d942fd997b5fd862",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658204033236,
+        "stop" : 1658204077137,
+        "duration" : 43901
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "122024::Validate user choice is respected in all applications for theme selection.",
+      "uid" : "11cec535565f5327",
+      "parentUid" : "62f47106f13606b5d942fd997b5fd862",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658204077137,
+        "stop" : 1658204138893,
+        "duration" : 61756
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "122034::Validate if the \"selectedTheme\" field does not exist in config.json, the application selects Day theme as default.",
+      "uid" : "2718c81ff834bd1d",
+      "parentUid" : "62f47106f13606b5d942fd997b5fd862",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658204138894,
+        "stop" : 1658204202631,
+        "duration" : 63737
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "62f47106f13606b5d942fd997b5fd862"
+  }, {
+    "name" : "Customer Onboarding: ",
+    "children" : [ {
+      "name" : "167859::Validate Customer Onboarding application shows Customer ID and Tenant ID as columns in the table",
+      "uid" : "c592ff807d94ad7e",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658204277761,
+        "stop" : 1658204348271,
+        "duration" : 70510
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "44854,210392,210393,246931,186128::Create a customer",
+      "uid" : "cc260f842839e4a6",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658204348272,
+        "stop" : 1658204429381,
+        "duration" : 81109
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "37689::Grant Consent",
+      "uid" : "cccce56e14118cbf",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658204429381,
+        "stop" : 1658204565037,
+        "duration" : 135656
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "44855,40213::Register a customer",
+      "uid" : "78f8d783bb612f2b",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658204565037,
+        "stop" : 1658204612588,
+        "duration" : 47551
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "39603::Check if the newly created customer is enabled without the need of restarting any API",
+      "uid" : "4a82ca177105becd",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658204612588,
+        "stop" : 1658204797038,
+        "duration" : 184450
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "36586::Get the list of all onboarded customers",
+      "uid" : "3a569bbafff11a11",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658204797038,
+        "stop" : 1658204842834,
+        "duration" : 45796
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "110989::Validate Azure Tenant ID for a customer can be changed from the Customer Onboarding application ",
+      "uid" : "b127b320f2a49793",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658204842834,
+        "stop" : 1658204878166,
+        "duration" : 35332
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "111148::Validate when the Tenant ID is changed, the Customer Onboarding application  generates a new admin consent link",
+      "uid" : "459ae0edc43f3998",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658204878166,
+        "stop" : 1658204923244,
+        "duration" : 45078
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "39924::Check the tenant entitlements given to the users by Customer Onboarding",
+      "uid" : "c08b47f4ecc9e1b4",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658204923244,
+        "stop" : 1658205082338,
+        "duration" : 159094
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "215177::Validate users is able to update provisioning options for registered customers",
+      "uid" : "a91875612fea8df5",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658205082339,
+        "stop" : 1658205206433,
+        "duration" : 124094
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "78535,36665::Unregister a customer",
+      "uid" : "3c9c9acf5b628208",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658205206434,
+        "stop" : 1658205305027,
+        "duration" : 98593
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "78535::Validate all database records created during onboarding in all PNext databases are removed when a customer is unregistered in the application",
+      "uid" : "d0326e139f8a16ac",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205305027,
+        "stop" : 1658205333884,
+        "duration" : 28857
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "167860::Validate user can be given read-only access to the Customer Onboarding application",
+      "uid" : "2a8e553c75609746",
+      "parentUid" : "4d817f0c91cad2964d292527b4d0f4eb",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658205333884,
+        "stop" : 1658205525763,
+        "duration" : 191879
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "4d817f0c91cad2964d292527b4d0f4eb"
+  }, {
+    "name" : "Dashboard builder Validation:",
+    "children" : [ {
+      "name" : "83604,84193::Verify a message is displayed that no dashboards are available if no dashboards are created or available ",
+      "uid" : "c2980aa6df134c7d",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205655471,
+        "stop" : 1658205674705,
+        "duration" : 19234
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "84095,114023::Validate edit menu list for edit mode in dashboard",
+      "uid" : "b707eb0c8fa95dc1",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205674705,
+        "stop" : 1658205686724,
+        "duration" : 12019
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "84152::File menu is displayed with all the basic operations",
+      "uid" : "791a817e51cee627",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205686724,
+        "stop" : 1658205704831,
+        "duration" : 18107
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "84190::Action buttons should be available on the header of dashboard",
+      "uid" : "f177abe9d551b2ee",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205704832,
+        "stop" : 1658205715943,
+        "duration" : 11111
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "85403,85141::Verify if a new Grid dashboard opens when clicking on 'Use' button without selecting from any templates",
+      "uid" : "32cc51f167191257",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205715943,
+        "stop" : 1658205735175,
+        "duration" : 19232
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "86571::Verify if dashboard settings can be changed once it is set up from File menu",
+      "uid" : "e7686252dd6a2486",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205735175,
+        "stop" : 1658205758073,
+        "duration" : 22898
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "112999,113174::Validate typing into the filter searches both in categories and components names",
+      "uid" : "6a33b07334cadccb",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205758073,
+        "stop" : 1658205774721,
+        "duration" : 16648
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "115234,115240,115248, 115250::In Floating (Static) layout Components can be selected with a lasso ",
+      "uid" : "4c94c696fed58a94",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205774721,
+        "stop" : 1658205829351,
+        "duration" : 54630
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "115544,115656,115658,115659::Validate user is able to move selected components together as a group in Floating (Static) mode  ",
+      "uid" : "6325fa7fe5623c84",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205829351,
+        "stop" : 1658205890304,
+        "duration" : 60953
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "115245::In Grid (Responsive) layout  Components can be selected only by holding the Ctrl key and clicking on them",
+      "uid" : "d0a76b11777eaa17",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658205890305,
+        "stop" : 1658205940123,
+        "duration" : 49818
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "104587:M:Validate user can check and uncheck various component groups.",
+      "uid" : "592e5ebb12febe4e",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205940123,
+        "stop" : 1658205962628,
+        "duration" : 22505
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "104605,104487:M:Validate checked categories by the user will show in the component menu.",
+      "uid" : "4f9b1ef746783990",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658205962628,
+        "stop" : 1658206112911,
+        "duration" : 150283
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "120886,120841::Undo and Redo functionality to Add and Remove multiple widgets",
+      "uid" : "42623fb9c5ae2309",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206112911,
+        "stop" : 1658206168965,
+        "duration" : 56054
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "117007,120958::Validate all available dashboards for the current user are listed in the sidebar of the application in playback mode.",
+      "uid" : "dd4a3159526c647e",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206168965,
+        "stop" : 1658206232213,
+        "duration" : 63248
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "120972:The Dashboard Manager option validation.",
+      "uid" : "d490787c154f725a",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206232214,
+        "stop" : 1658206255764,
+        "duration" : 23550
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "121452:Create new Folder on Dashboard Management page.",
+      "uid" : "de77a12edea85b34",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206255764,
+        "stop" : 1658206278853,
+        "duration" : 23089
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "117008::Validate clicking on a dashboard from the sidebar menu opens that dashboard in playback mode.",
+      "uid" : "bc1b46d374fec576",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206278853,
+        "stop" : 1658206297212,
+        "duration" : 18359
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "167425::Validate Dashboard functionality with url parameters.",
+      "uid" : "2eef9a1f0ab73b5d",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206297212,
+        "stop" : 1658206349882,
+        "duration" : 52670
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "122613,121960, 121961, 121025, 120974, 120971::Validate current dashboard header title is updated if current dashboard is being renamed.",
+      "uid" : "ed770af0c7a29fa7",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206349882,
+        "stop" : 1658206410077,
+        "duration" : 60195
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "122520,122520::Export function of the Dashboard in Dashboard Management.",
+      "uid" : "3a9d2c2fc760356f",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206410078,
+        "stop" : 1658206436457,
+        "duration" : 26379
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "120856,120858:Validate an icon is shown when the user hovers on the folder or dashboard item.",
+      "uid" : "a2a9404dda79d67",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206436459,
+        "stop" : 1658206458460,
+        "duration" : 22001
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "120903:Private folder structure should contain dashboard of the logged in user",
+      "uid" : "a4abbaabae01c74e",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206458460,
+        "stop" : 1658206598650,
+        "duration" : 140190
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "117167:Validate user is able to make a private dashboard public.",
+      "uid" : "3d1509a9ced37504",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206598651,
+        "stop" : 1658206619750,
+        "duration" : 21099
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "121029:Private and Public folders in Dashboard Management page.",
+      "uid" : "c5fbf4a9ac3430f6",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206619750,
+        "stop" : 1658206638510,
+        "duration" : 18760
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "121839,121871:Move dialog validation for Dashboard or Folder context menu.",
+      "uid" : "4bf6098257e55cba",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206638510,
+        "stop" : 1658206666593,
+        "duration" : 28083
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "121931:Validate moving dashboard to different folder under same tab and also to folder under different tab.",
+      "uid" : "6f0337b26d98acb8",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206666593,
+        "stop" : 1658206712762,
+        "duration" : 46169
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "121947:Move dashboard to its current folder and test the duplicate name check.",
+      "uid" : "2725a96d272c799c",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206712762,
+        "stop" : 1658206757956,
+        "duration" : 45194
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "124316,124318, 124319:Validate on clicking File -> Open dashboard dialog is open for selecting a saved dashboard.",
+      "uid" : "2e374375d07ce3b8",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206757956,
+        "stop" : 1658206784029,
+        "duration" : 26073
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "121938,121942:Validate the Delete functionality.",
+      "uid" : "6c02e7ea68513c24",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206784029,
+        "stop" : 1658206867518,
+        "duration" : 83489
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "151143 :: Dashboard:Validate the default number of columns for new responsive dashboards is 24",
+      "uid" : "af59d08826e84aac",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206867518,
+        "stop" : 1658206881029,
+        "duration" : 13511
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "122554, 122562, 121943, 122612:Import function of the Dashboard and Folder(Private and Public) in Dashboard Management",
+      "uid" : "54aacf88222912d2",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658206881029,
+        "stop" : 1658207016875,
+        "duration" : 135846
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "117154, 117157, 117165, 121032 :: Dashboard:Creation of New Dashboards",
+      "uid" : "d75f7ea5a8d0ef7",
+      "parentUid" : "fd831d9d8eefe385bea4a32d8d1606e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207016875,
+        "stop" : 1658207129421,
+        "duration" : 112546
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "fd831d9d8eefe385bea4a32d8d1606e5"
+  }, {
+    "name" : "Dashboard Widgets Validation:",
+    "children" : [ {
+      "name" : "104706::Verify that user is able to modify the style attributes of the container for a widget",
+      "uid" : "7f39162c5ada49b7",
+      "parentUid" : "d1e6f50a94322b3c49c8ce7378c4773b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207202730,
+        "stop" : 1658207233783,
+        "duration" : 31053
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "170514::Validate when more than one widget is selected, alignment options become available in dashboard",
+      "uid" : "ed195f68dc3065eb",
+      "parentUid" : "d1e6f50a94322b3c49c8ce7378c4773b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207233783,
+        "stop" : 1658207280237,
+        "duration" : 46454
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "170530::Validate if any of the alignment options is used, widgets are moved as per function used",
+      "uid" : "a49dd022cefc7ba1",
+      "parentUid" : "d1e6f50a94322b3c49c8ce7378c4773b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207280238,
+        "stop" : 1658207312130,
+        "duration" : 31892
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "126142 :: Dashboard: Validate Copy/Paste/Duplicate exist in edit menu and are functional operations on selected widgets in static mode",
+      "uid" : "de1613cb43f6314a",
+      "parentUid" : "d1e6f50a94322b3c49c8ce7378c4773b",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658207312130,
+        "stop" : 1658207363465,
+        "duration" : 51335
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "d1e6f50a94322b3c49c8ce7378c4773b"
+  }, {
+    "name" : "Global Settings Validation: ",
+    "children" : [ {
+      "name" : "52303,79524:M:Validate \"Global settings\" menu item is available in the \"Settings\" menu for all applications",
+      "uid" : "c35c1fa45c3bf214",
+      "parentUid" : "f2e5ffac5184edfbe11e6df0990d0424",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207444051,
+        "stop" : 1658207473578,
+        "duration" : 29527
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "52304,65823:M:Check that the theme selector is available in Global settings menu",
+      "uid" : "5c0ec9d911cc7390",
+      "parentUid" : "f2e5ffac5184edfbe11e6df0990d0424",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207473578,
+        "stop" : 1658207485290,
+        "duration" : 11712
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "48692,48694:M:Check that user's theme selection is valid for all applications in the environment regardless of which application is used to switch it",
+      "uid" : "e03f50b39980ee63",
+      "parentUid" : "f2e5ffac5184edfbe11e6df0990d0424",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207485290,
+        "stop" : 1658207509774,
+        "duration" : 24484
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "48693:M:Check that user's theme selection is remembered when the application is refreshed",
+      "uid" : "146000835b247223",
+      "parentUid" : "f2e5ffac5184edfbe11e6df0990d0424",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207509774,
+        "stop" : 1658207534006,
+        "duration" : 24232
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "78000:M:Check that default application configuration is user-specific",
+      "uid" : "59ba5b9298b8e2e9",
+      "parentUid" : "f2e5ffac5184edfbe11e6df0990d0424",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207534006,
+        "stop" : 1658207631871,
+        "duration" : 97865
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "106017::Validate theme switching can be disabled  or enabled for an application from application configuration",
+      "uid" : "4369395be0ad6d2",
+      "parentUid" : "f2e5ffac5184edfbe11e6df0990d0424",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207631871,
+        "stop" : 1658207785837,
+        "duration" : 153966
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "106023::Validate theme switching is enabled for an application if the enableThemeSwitching field does not exist in config.json",
+      "uid" : "a70e17dda127377d",
+      "parentUid" : "f2e5ffac5184edfbe11e6df0990d0424",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207785838,
+        "stop" : 1658207846397,
+        "duration" : 60559
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "111414,111424,111430::Validate support menu item is hidden by changing the \"supportMenuItemHidden\" flag in config.json for any application",
+      "uid" : "c1dd74c2c75d3ca5",
+      "parentUid" : "f2e5ffac5184edfbe11e6df0990d0424",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658207846397,
+        "stop" : 1658208012481,
+        "duration" : 166084
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "f2e5ffac5184edfbe11e6df0990d0424"
+  }, {
+    "name" : "Poseidon Next Setup Validations: ",
+    "children" : [ {
+      "name" : "45303::Install the latest version of Poseidon Next on-premise",
+      "uid" : "d9c7ce7f89ae47c5",
+      "parentUid" : "4a545bbb1534460e628cc282581761fe",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658208038508,
+        "stop" : 1658208395917,
+        "duration" : 357409
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "48198::Update an existing on-premise installation",
+      "uid" : "f634e65c8d23e372",
+      "parentUid" : "4a545bbb1534460e628cc282581761fe",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658208395918,
+        "stop" : 1658208480512,
+        "duration" : 84594
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "45319::Uninstall the latest version of Poseidon Next on-premise",
+      "uid" : "72362d61244054bb",
+      "parentUid" : "4a545bbb1534460e628cc282581761fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658208480512,
+        "stop" : 1658208708016,
+        "duration" : 227504
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "79582,99059::Install on-premise with an SQL database instead of LiteDB",
+      "uid" : "bd7c1d2ddd16ea0d",
+      "parentUid" : "4a545bbb1534460e628cc282581761fe",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658208708016,
+        "stop" : 1658209060506,
+        "duration" : 352490
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "122664::Validate user can provide a list of applications to skip using a parameter :-skipApplications \"<comma-separated-list>\"",
+      "uid" : "b761574a0614ad7f",
+      "parentUid" : "4a545bbb1534460e628cc282581761fe",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658209060506,
+        "stop" : 1658209424353,
+        "duration" : 363847
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "122668::Validate user can provide a list of application name/application id both to skip using a parameter",
+      "uid" : "8592759e42afadfb",
+      "parentUid" : "4a545bbb1534460e628cc282581761fe",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658209424354,
+        "stop" : 1658209776726,
+        "duration" : 352372
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "124827::Installation : On-prem : Install on-prem application with '-skipAppRegistration' $true",
+      "uid" : "a0f040e5ba782b78",
+      "parentUid" : "4a545bbb1534460e628cc282581761fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658209776727,
+        "stop" : 1658210004650,
+        "duration" : 227923
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "124828::Installation : On-prem : Install on-prem application with '-skipAppRegistration' set to $false",
+      "uid" : "48c35b108f48abfd",
+      "parentUid" : "4a545bbb1534460e628cc282581761fe",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658210004650,
+        "stop" : 1658210232310,
+        "duration" : 227660
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "4a545bbb1534460e628cc282581761fe"
+  }, {
+    "name" : "User Login/Logout:",
+    "children" : [ {
+      "name" : "8270::Log in with valid username and password",
+      "uid" : "5649d111164fb942",
+      "parentUid" : "741e952c2723e67303ba6e1807751d39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210256203,
+        "stop" : 1658210287379,
+        "duration" : 31176
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "8270::Log out of the portal",
+      "uid" : "a1c5652586e0cf61",
+      "parentUid" : "741e952c2723e67303ba6e1807751d39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210287380,
+        "stop" : 1658210320311,
+        "duration" : 32931
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "122625::Validate that user is required to change the password when administrator raises the flag 'Require password reset",
+      "uid" : "86ea8b0375492f42",
+      "parentUid" : "741e952c2723e67303ba6e1807751d39",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210320311,
+        "stop" : 1658210427378,
+        "duration" : 107067
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "741e952c2723e67303ba6e1807751d39"
+  }, {
+    "name" : "Navigation Validation:",
+    "children" : [ {
+      "name" : "48449:M:See all available applications in application menu",
+      "uid" : "9653b7a8cd3ff44c",
+      "parentUid" : "726162a2e5759304b20dabce80c4f527",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658210491011,
+        "stop" : 1658210494959,
+        "duration" : 3948
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "79785:M:Check sidebar displays only applications that supply navigation items to it",
+      "uid" : "e7f2dd9448e9509e",
+      "parentUid" : "726162a2e5759304b20dabce80c4f527",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210494960,
+        "stop" : 1658210526457,
+        "duration" : 31497
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "48582:M:Load any specific application by adding it after the root URL",
+      "uid" : "73effc6dd812a88",
+      "parentUid" : "726162a2e5759304b20dabce80c4f527",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210526458,
+        "stop" : 1658210577964,
+        "duration" : 51506
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "48579:M:Check that the user is navigated to the default application when the user goes to the root URL",
+      "uid" : "aec88788238cbcb0",
+      "parentUid" : "726162a2e5759304b20dabce80c4f527",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210577965,
+        "stop" : 1658210629991,
+        "duration" : 52026
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "48453:M:Collapse/expand navigation UI",
+      "uid" : "10c081f5ca57cc07",
+      "parentUid" : "726162a2e5759304b20dabce80c4f527",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210629991,
+        "stop" : 1658210639508,
+        "duration" : 9517
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "48466:M:See the sidebar with in-application navigation",
+      "uid" : "39b5cc25d36379fc",
+      "parentUid" : "726162a2e5759304b20dabce80c4f527",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210639508,
+        "stop" : 1658210652429,
+        "duration" : 12921
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "111185:M:Validate a floating menu is shown with the subitems when sidebar is collapsed for sidebar item which has subitems.",
+      "uid" : "47bdcb56520f05d1",
+      "parentUid" : "726162a2e5759304b20dabce80c4f527",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210652429,
+        "stop" : 1658210672431,
+        "duration" : 20002
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "106174:M:Validate \"User Profile\" remains in the \"Profile\" menu for Azure AD environments",
+      "uid" : "7c901286fdd45d99",
+      "parentUid" : "726162a2e5759304b20dabce80c4f527",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210672431,
+        "stop" : 1658210673328,
+        "duration" : 897
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "726162a2e5759304b20dabce80c4f527"
+  }, {
+    "name" : "User Profile Validation:",
+    "children" : [ {
+      "name" : "8455,106174::Verify that User Profile page style is designed the same way as User Administration pages",
+      "uid" : "4e5986bd1eb8d7a",
+      "parentUid" : "e3d516e8fc39d50e3674608a3df13dff",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658210745168,
+        "stop" : 1658210784464,
+        "duration" : 39296
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "8512::Check 'Registered' and 'Last Login' dates in User Profile page",
+      "uid" : "3f11dfa41142a1d4",
+      "parentUid" : "e3d516e8fc39d50e3674608a3df13dff",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658210784464,
+        "stop" : 1658210827235,
+        "duration" : 42771
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "34792::Change password in User Profile page",
+      "uid" : "28b95ac6f5cd04a1",
+      "parentUid" : "e3d516e8fc39d50e3674608a3df13dff",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658210827235,
+        "stop" : 1658210867003,
+        "duration" : 39768
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "34793::Change personal details in User Profile page",
+      "uid" : "104dbbe3331f001a",
+      "parentUid" : "e3d516e8fc39d50e3674608a3df13dff",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658210867003,
+        "stop" : 1658210906815,
+        "duration" : 39812
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "8522::Change security question and answer in User Profile page",
+      "uid" : "6b35913f59ea5899",
+      "parentUid" : "e3d516e8fc39d50e3674608a3df13dff",
+      "status" : "failed",
+      "time" : {
+        "start" : 1658210906815,
+        "stop" : 1658210946677,
+        "duration" : 39862
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "e3d516e8fc39d50e3674608a3df13dff"
+  }, {
+    "name" : "Subscriptions Validation:",
+    "children" : [ {
+      "name" : "130250:M:Validate new subscriptions can be added to the user.",
+      "uid" : "faf0fa0cda0e1d2d",
+      "parentUid" : "4acf170785e41e38ee74d6d81f9029f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211017421,
+        "stop" : 1658211067727,
+        "duration" : 50306
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "130201:M:Validate application's main page displays list of the subscriptions for the current user",
+      "uid" : "a82313bd5087701f",
+      "parentUid" : "4acf170785e41e38ee74d6d81f9029f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211067728,
+        "stop" : 1658211080852,
+        "duration" : 13124
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "161751:Validate update button is not enabled in subscription if there is no change",
+      "uid" : "97d9755589563b38",
+      "parentUid" : "4acf170785e41e38ee74d6d81f9029f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211080852,
+        "stop" : 1658211096513,
+        "duration" : 15661
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "167874,167879,167880:Validate when \"e-mail\" is checked in the Destinations page of a subscription, the user has a choice between the \"Preferred email\"  and \"Other email\". of a subscription,  user has a choice between the \"Preferred email\"  and \"Other email\".",
+      "uid" : "a32803ef65997b90",
+      "parentUid" : "4acf170785e41e38ee74d6d81f9029f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211096513,
+        "stop" : 1658211120651,
+        "duration" : 24138
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "152917,153360,167881:Validate user can opt in to receive notification e-mails from a subscription",
+      "uid" : "6351c5e91c34c273",
+      "parentUid" : "4acf170785e41e38ee74d6d81f9029f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211120652,
+        "stop" : 1658211574065,
+        "duration" : 453413
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "130257:M:Validate subscriptions can be deleted",
+      "uid" : "2fae1e25148bc5c9",
+      "parentUid" : "4acf170785e41e38ee74d6d81f9029f9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211574065,
+        "stop" : 1658211595391,
+        "duration" : 21326
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "4acf170785e41e38ee74d6d81f9029f9"
+  }, {
+    "name" : "User Validation:",
+    "children" : [ {
+      "name" : "7024, 107143::Create a new user",
+      "uid" : "57088f9829d0d0fe",
+      "parentUid" : "694cbe60937ccd19f7214c2ad3902a9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211667106,
+        "stop" : 1658211689000,
+        "duration" : 21894
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "8240::Search for a user",
+      "uid" : "532c958907993e0f",
+      "parentUid" : "694cbe60937ccd19f7214c2ad3902a9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211689000,
+        "stop" : 1658211698718,
+        "duration" : 9718
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "8233::Edit an existing user",
+      "uid" : "b65696fa36f4ace7",
+      "parentUid" : "694cbe60937ccd19f7214c2ad3902a9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211698718,
+        "stop" : 1658211722928,
+        "duration" : 24210
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "8348::Check 'Last' login' date in Users page",
+      "uid" : "a51804d40428ed5c",
+      "parentUid" : "694cbe60937ccd19f7214c2ad3902a9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211722928,
+        "stop" : 1658211765278,
+        "duration" : 42350
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "166436::Validate \"Password Requirements\" in User Administration has 3 new fields for configuration",
+      "uid" : "c69cd341d98a4c36",
+      "parentUid" : "694cbe60937ccd19f7214c2ad3902a9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211765278,
+        "stop" : 1658211774780,
+        "duration" : 9502
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "166542::Validate min and max value for the field maximum lifetime of  'Password Requirements' page  in User Administration",
+      "uid" : "ad671fb0de6c98f7",
+      "parentUid" : "694cbe60937ccd19f7214c2ad3902a9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211774780,
+        "stop" : 1658211904986,
+        "duration" : 130206
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "166543::Validate min and max value for the field  minimum  lifetime of  'Password Requirements' page  in User Administration ",
+      "uid" : "4b0d4cea3c8055ef",
+      "parentUid" : "694cbe60937ccd19f7214c2ad3902a9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658211904986,
+        "stop" : 1658212002830,
+        "duration" : 97844
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "8061::Delete an existing user",
+      "uid" : "a0139632db4cc9f5",
+      "parentUid" : "694cbe60937ccd19f7214c2ad3902a9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658212002830,
+        "stop" : 1658212014185,
+        "duration" : 11355
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "131928,131929::Validate password recovery functionality when 'PasswordRecovery:Disabled' is 'true'",
+      "uid" : "43d3f1e5e428786e",
+      "parentUid" : "694cbe60937ccd19f7214c2ad3902a9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658212014185,
+        "stop" : 1658212118896,
+        "duration" : 104711
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "166555::Validate min and max value for the field  reuse limit of  \"Password Requirements\" page  in User Administration",
+      "uid" : "4c15c5e3608125b4",
+      "parentUid" : "694cbe60937ccd19f7214c2ad3902a9a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1658212118896,
+        "stop" : 1658212203193,
+        "duration" : 84297
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "694cbe60937ccd19f7214c2ad3902a9a"
+  } ]
+}

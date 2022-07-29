@@ -30,3 +30,7 @@ Documentation Files
 ajcore*
 allure-results
 allure-report
+/src/main/java/utilities/AllureReportToAzureDevops/packages/
+/src/main/java/utilities/AllureReportToAzureDevops/AllureToAzureDevOps/bin/
+/src/main/java/utilities/AllureReportToAzureDevops/AllureToAzureDevOps/obj/
+/src/main/java/utilities/AllureReportToAzureDevops/.vs/
