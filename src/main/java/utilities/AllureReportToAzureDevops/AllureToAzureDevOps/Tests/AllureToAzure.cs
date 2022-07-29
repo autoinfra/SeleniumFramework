@@ -61,7 +61,7 @@ namespace KDI.Pnext.IDP
             {
                 if (_AllureTestCaseResultsPath.Equals(string.Empty))
                 {
-                    _AllureTestCaseResultsPath = Path.GetFullPath(RunnerRootDirectory.TrimEnd('\\') + @"\Reports\5cd3e1e4aa5eed81.json");
+                    _AllureTestCaseResultsPath = Path.GetFullPath(RunnerRootDirectory.TrimEnd('\\') + @"\Reports\ce166715fafff72b.json");
                 }
                 Console.WriteLine("Run Feeds Path:" + _AllureTestCaseResultsPath);
                 return _AllureTestCaseResultsPath;
@@ -70,27 +70,15 @@ namespace KDI.Pnext.IDP
         }
 
 
-
-
         [Test]
-        public void POST_CreateCustomer()
-        {
-            Assert.AreEqual(finalResult["Energy budget: Get vessel group"], "passed");
-            //Assert.IsTrue(false);
-
-        }
-
-        [Test]
-        public void POST_GETAllCustomers()
+        public void searchInDuckDuckGo()
         {
              Assert.AreEqual(finalResult["Energy budget: Get vessel group"], "passed");
-            //Assert.IsTrue(false);
         }
         [Test]
-        public void POST_GetCustomerByID()
+        public void SearchFailTC()
         {
             Assert.AreEqual(finalResult["Energy budget: Get vessel group"], "failed", testResults2);
-            //Assert.IsTrue(false);
 
         }
 
